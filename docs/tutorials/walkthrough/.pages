@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - "VoltScript Simple Program": lab-01.md
+    - "VoltScript Libraries": lab-02.md
+    - "Dependency Management": lab-03a.md 
+    - "JsonVSE Extension": lab-03b.md 
+    - "Reading from DRAPI": lab-04.md
+    - "VoltScript JSON Converter": lab-05.md 
+    - "Putting it all Together": lab-06.md

@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - "Visual Studio Code Setup": ide
+    - Intro to VoltScript: walkthrough
+    - Enabling VoltScript in Volt Foundry: foundryinstall
+    - Intro to VoltScript for Volt Foundry: foundry
+    - Writing VoltScript in Volt Foundry: vs-in-foundry

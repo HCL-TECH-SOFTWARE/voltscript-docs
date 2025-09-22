@@ -1,0 +1,2 @@
+!!! warning "Hostnames must be resolvable"
+    Whatever hostnames you specify here, you need to ensure that they are resolvable. Make sure you have completed the relevant steps to update your hosts file for your relevant [Operating system setup](./prereqs/index.md)

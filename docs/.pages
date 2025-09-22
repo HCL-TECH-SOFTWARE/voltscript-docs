@@ -1,0 +1,7 @@
+nav:
+    - Welcome: index.md
+    - What's new: whatsnew
+    - Tutorials: tutorials
+    - How-to guides: howto
+    - Topic guides: topicguides
+    - References: references

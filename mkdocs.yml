@@ -1,0 +1,106 @@
+site_name: VoltScript Documentation
+site_url: https://opensource.hcltechsw.com/voltscript-docs/
+site_description: >-
+  HCL VoltScript Documentation, tutorials and blog. 
+  Turbocharging LotusScript for HCL Volt MX Go.
+use_directory_urls: false
+# Theme Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/images/VoltMXGoLogo.png
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+  custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+  font: false
+  favicon: assets/images/favicon.png
+
+  # Static files
+  static_templates:
+    - 404.html
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: voltscript
+          class: hljs
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.snippets:
+      base_path:
+        - "docs/.snippets"
+  - footnotes
+  - pymdownx.inlinehilite
+  - toc:
+     title: On this page
+
+# Copyright
+copyright: >-
+  Copyright &copy; 2023-2025, HCL America, Inc. | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/>
+  <a href="#__consent">Change cookie settings</a>
+
+extra:
+  productversion: 10.0
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HCL-TECH-SOFTWARE
+  version:
+    provider: mike
+  analytics:
+    provider: google
+    property: UA-169645537-2
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
+
+# Repository
+repo_url: https://github.com/HCL-TECH-SOFTWARE/voltscript-docs/
+repo_name: HCL-TECH-SOFTWARE/voltscript-docs
+edit_uri: edit/main/docs
+
+# Customization
+extra_css:
+  - assets/css/style.css
+  - assets/css/hljs.css
+  - assets/css/style1.css
+
+extra_javascript:
+  - assets/js/highlight.js
+  - assets/js/init.js
+
+plugins:
+  - awesome-pages
+  - search
+  - tags

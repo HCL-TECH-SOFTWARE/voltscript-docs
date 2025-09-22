@@ -1,0 +1,12 @@
+nav:
+    - index.md
+#    - Installation: installation
+    - Write code: writing
+    - Dependency management: archipelago
+    - Run code: running
+    - Volt Foundry: foundry
+    - Share code: sharing
+    - Core Language: language
+    - VoltScript Extensions: extensions
+    - VoltScript Library Modules: libraries.md
+    - Videos: https://www.youtube.com/@CodingCurmudgeons

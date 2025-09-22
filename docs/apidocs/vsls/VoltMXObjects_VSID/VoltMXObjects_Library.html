@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!-- {{vsidgenerated}} -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Library: VoltMXObjects</title>
+	<meta name="date" content="2025-04-25">
+	<meta name="keywords" content="jsonComparator()"><meta name="keywords" content="jsonSortLabels()"><meta name="keywords" content="VoltMxRequestObject()"><meta name="keywords" content="VoltMxResponseObject()"><meta name="keywords" content="VoltMxResultObject()"><meta name="keywords" content="VoltMxSessionObject()"><meta name="keywords" content="getErrorMsg()"><meta name="keywords" content="jsonSort()"><meta name="keywords" content="extractObjects()"><meta name="keywords" content="PROJECT_DIR()"><meta name="keywords" content="VoltMxRequest()"><meta name="keywords" content="VoltMxResponse()"><meta name="keywords" content="VoltMxResult()"><meta name="keywords" content="VoltMxSession()"><meta name="keywords" content="VoltMXObjects.VoltMXObjects Library">
+	<link rel="stylesheet" type="text/css" href="..\resources/vsid.css" title="balistyle">
+	<script type="text/javascript" src="..\resources/vsid.js"></script>
+</head>
+<body>
+<script type="text/javascript"></script>
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+
+
+<header id="masterHeader" class="dark master-header dark-master">
+	<div id="header-topbar" class="header-topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl" rel="nofollow"><img src="..\resources/hcl-white.png" class="img-responsive"></a>
+				</div>
+				<div class="col-xs-6 text-right">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl-tech" rel="nofollow">HCL Software</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav">
+	<a name="navbar.top">
+	<!--   -->
+	</a>
+	<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+	<a name="navbar.top.firstrow">
+	<!--   -->
+	</a>	
+	<ul class="navList" title="Navigation">
+		<!-- -->
+		<li><a href="VoltMXObjects_VSID.html" title="Navigate to VoltMXObjects">VoltMXObjects</a></li> 
+		<li class="navBarCell1Rev">VoltMXObjects</li>
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+	<!-- --> 
+	</ul>
+	<div><!--  -->
+		<script type="text/javascript"><!--
+		navcontentLink = document.getElementById("navcontent_navbar_top");
+		if (!!navcontentLink) {
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		}
+		  //-->
+		</script>
+	</div>
+	<div>
+		<ul class="subNavList">
+			
+		</ul>
+	</div>
+	<a name="skip.navbar.top">
+	<!--   -->
+	</a>
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<!-- LIBRARY -->
+<!-- ======== START OF LIBRARY DATA ======== -->
+<div class="header">
+	<h1 title="Library {{libraryname}}" class="title">Library VoltMXObjects</h1>
+</div>
+
+<div class="contentContainer">
+	<ul class="inheritance">
+		<!-- --> 
+
+		<ul class="inheritance">
+		<!-- --> 
+
+			<ul class="inheritance">
+				<li><h2>VoltMXObjects.VoltMXObjects</h2></li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr />
+
+	<div class="description">
+		<ul class="blockList">
+			<li class="blockList">
+				<div class="comments"><!-- summary --><pre></pre></div>
+				<div class="comments"><!-- description --><pre>Classes for integrating with Volt MX Foundry from Pre/Postprocessors and Integration Services</pre></div>
+				<hr />
+			</li>
+		</ul>
+	</div>
+
+	<ul class="blockList">	<li class="blockList">		<a name="library.summary"><!--   --></a>		<h3>Library Summary</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Library Summary Table">			<thead>						</thead>			<tbody>			<tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Script Creator</span></td><td class="colLast">Paul Withers</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Uses Libraries</span></td><td class="colLast">../libs/VoltScriptCollections, ../libs/VoltScriptLogging</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Uses VSEs</span></td><td class="colLast">JsonVSE, ContextVSE</td></tr>			</tbody>		</table>	</li></ul> 
+	
+	<div class="summary">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				<ul class="blockList">	<li class="blockList">		<a name="variables.summary"><!--   --></a>		<h3>Variables</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Variable Summary table, listing variables">			<thead>			<tr><th class="colFirst">Name</th><th class="colOne">Type</th><th class="colLast">Comment</th></tr>			</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code>Public <strong>PROJECT_DIR</strong></code></td><td><code> As String</code></td><td class="colLast comment"><em>Main directory of the project, required because CurDir returns the VoltScript program directory. Use this to retrieve resource files within the project directory, and set manually for unit tests.&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst"><code>Public <strong>VoltMxRequest</strong></code></td><td><code> As VoltMxRequestObject</code></td><td class="colLast comment"><em>Instance of VoltMxRequestObject parsed from Foundry input by extractObjects.&nbsp;</em></td></tr><tr class="rowColor"><td class="colFirst"><code>Public <strong>VoltMxResponse</strong></code></td><td><code> As VoltMxResponseObject</code></td><td class="colLast comment"><em>Instance of VoltMxResponseObject parsed from Foundry input by extractObjects.&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst"><code>Public <strong>VoltMxResult</strong></code></td><td><code> As VoltMxResultObject</code></td><td class="colLast comment"><em>Instance of VoltMxResultObject parsed from Foundry input by extractObjects.&nbsp;</em></td></tr><tr class="rowColor"><td class="colFirst"><code>Public <strong>VoltMxSession</strong></code></td><td><code> As VoltMxSessionObject</code></td><td class="colLast comment"><em>Instance of VoltMxSessionObject parsed from Foundry input by extractObjects.&nbsp;</em></td></tr>			</tbody>		</table>	</li></ul> 
+				
+				  
+				<ul class="blockList">	<li class="blockList">		<a name="classes.summary"><!--   --></a>		<h3>Classes Summary</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Classes Summary table, listing classes and comments">			<thead>						</thead>			<tbody>			<tr class="altColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\jsonComparator_ObjectClass.html" title="VoltMXObjects.jsonComparator">jsonComparator</a></span></td><td class="colLast">This class is used by the jsonSort class to compare two JSON objects based on the labels and sort orders provided.</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\jsonSortLabels_ObjectClass.html" title="VoltMXObjects.jsonSortLabels">jsonSortLabels</a></span></td><td class="colLast">This class is used to store the labels, sort order, and delimiter for the jsonSort class. The class is used by the jsonSort class to sort the JSON objects.</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\VoltMxRequestObject_ObjectClass.html" title="VoltMXObjects.VoltMxRequestObject">VoltMxRequestObject</a></span></td><td class="colLast">Class for interacting with Foundry request.</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\VoltMxResponseObject_ObjectClass.html" title="VoltMXObjects.VoltMxResponseObject">VoltMxResponseObject</a></span></td><td class="colLast">Class for interacting with Volt MX response.</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\VoltMxResultObject_ObjectClass.html" title="VoltMXObjects.VoltMxResultObject">VoltMxResultObject</a></span></td><td class="colLast">Class for passing content back to Foundry and manipulating results from an integration service in its postprocessor.</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLink"><a href="VoltMXObjects_Library\VoltMxSessionObject_ObjectClass.html" title="VoltMXObjects.VoltMxSessionObject">VoltMxSessionObject</a></span></td><td class="colLast">Class for interacting with Foundry session content.</td></tr>			</tbody>		</table>	</li></ul>
+				<ul class="blockList">	<li class="blockList">		<a name="methods.summary"><!--   --></a>		<h3>Method Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#VoltMXObjects.getErrorMsg-">getErrorMsg</a></span>(prefix As String) As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#VoltMXObjects.jsonSort-">jsonSort</a></span>(dataObj As JsonObject, lbl1 As String, lbl1Desc As Boolean, lbl2 As String, lbl2Desc As Boolean, lbl3 As String, lbl3Desc As Boolean, delim As String) As JsonObject</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#VoltMXObjects.extractObjects-">extractObjects</a></span>(data As String, isPreprocessor As Boolean)</code></td></tr>			</tbody>		</table>	</li></ul> 
+			</li>
+		</ul>
+	</div>
+
+	<div class="details">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				
+				
+				<!-- ============ METHOD DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="method.detail"><!--   --></a>		<h3>Methods Detail</h3>		<!-- Method Detail Element --><a name="VoltMXObjects.getErrorMsg-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="VoltMXObjects.getErrorMsg"><!--   --></a>		<h4>getErrorMsg</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="getErrorMsg method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Public Function getErrorMsg<em>(prefix As String)</em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="VoltMXObjects.getErrorMsg.comments"><!--   --></a>Converts an Error object to error code, message, line and stack trace</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="VoltMXObjects.getErrorMsg.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>prefix</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Prefix to prepend to the outputted error message&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="VoltMXObjects.getErrorMsg.codesample"><!--   --></a><pre class="codesample">&apos;The following code is the Foundry boilerplate:<br />    Dim ctx as New Context()<br />    Dim data as String<br />    Try<br />        data = ctx.Context<br />        Call extractObjects(data, false)<br />        &apos;****************<br />        &apos;START OF FOUNDRY HANDLER<br />        &apos;****************<br />        <br />        &apos;****************<br />        &apos;END OF FOUNDRY HANDLER<br />        &apos;****************<br />    Catch<br />        Call VoltMxResult.setErrorMessage(getErrorMsg(&quot;VOLTSCRIPT_CONNECTOR: &quot;))<br />    Finally<br />        Print VoltMxResult.toJson().toString(false)<br />    End Try</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="VoltMXObjects.jsonSort-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="VoltMXObjects.jsonSort"><!--   --></a>		<h4>jsonSort</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="jsonSort method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Public Function jsonSort<em>(dataObj As JsonObject, lbl1 As String, lbl1Desc As Boolean, lbl2 As String, lbl2Desc As Boolean, lbl3 As String, lbl3Desc As Boolean, delim As String)</em> As JsonObject</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="VoltMXObjects.jsonSort.comments"><!--   --></a>Given an array of JSON objects, returns a sorted array of JSON objects. Uses VoltScript Collections internally as a dependency.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="VoltMXObjects.jsonSort.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>dataObj</strong></td><td class="colOne">JsonObject</td><td class="colOne attributes"></td><td class="colLast comment"><em>JSON Object to be sorted&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>lbl1</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>First label on which to sort&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>lbl1Desc</strong></td><td class="colOne">Boolean</td><td class="colOne attributes"></td><td class="colLast comment"><em>True if the first sort should be Descending, False if Ascending&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">4</strong></td><td class="colOne"><strong>lbl2</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Second label on which to sort. Optional.&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">5</strong></td><td class="colOne"><strong>lbl2Desc</strong></td><td class="colOne">Boolean</td><td class="colOne attributes"></td><td class="colLast comment"><em>True if the second sort should be Descending, False if Ascending&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">6</strong></td><td class="colOne"><strong>lbl3</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Third label on which to sort. Optional.&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">7</strong></td><td class="colOne"><strong>lbl3Desc</strong></td><td class="colOne">Boolean</td><td class="colOne attributes"></td><td class="colLast comment"><em>True if the third sort should be Descending, False if Ascending&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">8</strong></td><td class="colOne"><strong>delim</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>The delimiter used by label paths. If not provided, delim will default to &quot;/&quot;&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="VoltMXObjects.jsonSort.codesample"><!--   --></a><pre class="codesample">    Dim parser as New JsonParser()<br />    Dim dataobj as New JsonObject(true), sortedobj as JsonObject()<br />    Dim fpath as String<br />    fpath = CurDir() &amp; &quot;/myJSONData.json&quot;<br />    Try<br />        Call parser.loadFromFile(fpath)<br />        Set dataObj = parser.getRootObject()<br />        If dataobj Is Nothing Then<br />            Print &quot;Error: Unable to parse file &quot; &amp; fpath<br />            Exit Function<br />        End If<br />        Set sortedobj = jsonSort(dataObj, &quot;company&quot;, False, &quot;address/state&quot;, False, &quot;address/city&quot;, False, &quot;/&quot;)<br />    Catch<br />        Print &quot;Error &quot; &amp; Error() &amp; &quot; on line &quot; &amp; Erl()<br />    End Try</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="VoltMXObjects.extractObjects-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="VoltMXObjects.extractObjects"><!--   --></a>		<h4>extractObjects</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="extractObjects method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Public Sub extractObjects<em>(data As String, isPreprocessor As Boolean)</em></pre></th></tr>			</thead>			<tbody>		<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="VoltMXObjects.extractObjects.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>data</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>JSON string input from Foundry&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>isPreprocessor</strong></td><td class="colOne">Boolean</td><td class="colOne attributes"></td><td class="colLast comment"><em>Whether Foundry object is from a preprocessor&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="VoltMXObjects.extractObjects.codesample"><!--   --></a><pre class="codesample">&apos;The following is the Foundry boilerplate code:    Dim ctx as New Context()<br />    Dim data as String<br />    Try<br />        data = ctx.Context<br />        Call extractObjects(data, false)<br />        &apos;****************<br />        &apos;START OF FOUNDRY HANDLER<br />        &apos;****************<br />        <br />        &apos;****************<br />        &apos;END OF FOUNDRY HANDLER<br />        &apos;****************<br />    Catch<br />        Call VoltMxResult.setErrorMessage(getErrorMsg(&quot;VOLTSCRIPT_CONNECTOR: &quot;))<br />    Finally<br />        Print VoltMxResult.toJson().toString(false)<br />    End Try</pre></td></tr>		</tbody>		</table>			</li></ul>	</li></ul>
+			</li>
+		</ul>
+	</div> 
+	
+</div>
+<!-- ========= END OF LIBRARY DATA ========= -->
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+	<a name="navbar.bottom"><!--   --></a>
+	<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+	
+	<a name="navbar.bottom.firstrow"><!--   --></a>
+	<ul class="navList" title="Navigation">
+		<!--  -->
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+		<!-- 
+		<li><a href="prevelement (class or package)url.html" title="previous element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Previous element (class or package) Name</span></a></li>
+		{{link_prevelement}}
+		-->
+
+		<!-- 
+		<li><a href="nextelement (class or package)url.html" title="next element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Next element (class or package) Name</span></a></li>
+		{{link_nextelement}}
+		-->
+	</ul>
+	<ul class="navList">
+	<!-- 
+		<li><a href="../../../../index.html?url for frames" target="_top">Frames</a></li>
+		<li><a href="{{elementurl}}" target="_top">No&nbsp;Frames</a></li>
+	-->
+	</ul>
+	<ul class="navList" id="navcontent_navbar_bottom">
+	<!-- 
+		<li><a href="../../../nav-content-noframe.html">All&nbsp;Classes</a></li>
+	 -->
+	</ul>
+	
+	<div>
+		<script type="text/javascript"><!--
+		  navcontentLink = document.getElementById("navcontent_navbar_bottom");
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		  //-->
+		</script>
+	</div>
+	
+	<div>
+		<ul class="subNavList">
+		<!-- 
+			<li>Summary:&nbsp;</li>
+			<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.summary">Method</a></li>
+		 -->
+		</ul>
+		<ul class="subNavList">
+		<!-- 
+			<li>Detail:&nbsp;</li>
+			<li>Field&nbsp;|&nbsp;</li>
+			<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.detail">Method</a></li>
+		 -->
+		</ul>
+	</div>
+	
+	<a name="skip.navbar.bottom"><!--   --></a>
+</div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; <a href="https://www.hcltechsw.com/">HCL America, Inc.</a> 1999, 2023. All Rights Reserved.</small></p>
+</body>
+</html>

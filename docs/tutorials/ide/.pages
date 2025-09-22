@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - Windows: windows.md
+    - MacOS: mac.md
+    - Docker Container: devcontainer.md
+    - Visual Studio Code extensions: howto/writing/vses.html

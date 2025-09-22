@@ -1,0 +1,6 @@
+VSE|WebVSE.WebVSE|WebVSE_VSID\WebVSE_VSE.html|WebVSE
+Class|WebVSE.WebServer|WebVSE_VSID\WebVSE_VSE\WebServer_ObjectClass.html|WebServer
+Class|WebVSE.WebResponse|WebVSE_VSID\WebVSE_VSE\WebResponse_ObjectClass.html|WebResponse
+Class|WebVSE.WebRequest|WebVSE_VSID\WebVSE_VSE\WebRequest_ObjectClass.html|WebRequest
+Class|WebVSE.URLBuilder|WebVSE_VSID\WebVSE_VSE\URLBuilder_ObjectClass.html|URLBuilder
+Class|WebVSE.Completion|WebVSE_VSID\WebVSE_VSE\Completion_ObjectClass.html|Completion

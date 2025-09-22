@@ -1,0 +1,5 @@
+nav:
+    - index.md
+    - voltscript.md
+    - vscode.md
+    - http-server.md

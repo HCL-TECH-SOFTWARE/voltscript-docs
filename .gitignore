@@ -1,0 +1,7 @@
+# VS Code
+.devcontainer
+.devcontainerjson
+.vscode/
+
+# MKDocs
+site/*

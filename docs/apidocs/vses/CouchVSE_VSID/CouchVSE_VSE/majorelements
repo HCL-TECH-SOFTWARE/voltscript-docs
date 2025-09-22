@@ -1,0 +1,8 @@
+Class|CouchVSE.CouchView|CouchVSE_VSID\CouchVSE_VSE\CouchView_ObjectClass.html|CouchView
+Class|CouchVSE.CouchServer|CouchVSE_VSID\CouchVSE_VSE\CouchServer_ObjectClass.html|CouchServer
+Class|CouchVSE.CouchForm|CouchVSE_VSID\CouchVSE_VSE\CouchForm_ObjectClass.html|CouchForm
+Class|CouchVSE.CouchDocument|CouchVSE_VSID\CouchVSE_VSE\CouchDocument_ObjectClass.html|CouchDocument
+Class|CouchVSE.CouchDatabase|CouchVSE_VSID\CouchVSE_VSE\CouchDatabase_ObjectClass.html|CouchDatabase
+Class|CouchVSE.CouchAttachment|CouchVSE_VSID\CouchVSE_VSE\CouchAttachment_ObjectClass.html|CouchAttachment
+Class|CouchVSE.CouchAgent|CouchVSE_VSID\CouchVSE_VSE\CouchAgent_ObjectClass.html|CouchAgent
+Class|CouchVSE.CouchACL|CouchVSE_VSID\CouchVSE_VSE\CouchACL_ObjectClass.html|CouchACL

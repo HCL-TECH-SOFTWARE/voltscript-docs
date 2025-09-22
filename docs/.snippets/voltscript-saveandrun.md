@@ -1,0 +1,2 @@
+1. Press Ctrl+Shift+P (Cmd+Shift+P on Mac), then select **VoltScript: Save & Run Script**. (You can start typing "VoltScript" to filter the available commands).
+1. Press the `Enter` key to confirm your input (no script arguments are necessary).

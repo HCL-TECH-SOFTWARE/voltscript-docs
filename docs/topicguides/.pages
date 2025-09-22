@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - architectural.md
+    - writing.md
+    - VoltScript in Volt Foundry: foundry
+    - VoltScript Extensions: voltscript-extensions
+    - VoltScript Library Modules: references/libraries.html
+    - running.md
+    - considerations.md

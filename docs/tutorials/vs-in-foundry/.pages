@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - "Hello World": lab-01.md
+    - "Hello Name": lab-02.md
+    - "Identity Service and DRAPI": lab-03.md 
+   

@@ -1,0 +1,2 @@
+!!! info "Troubleshooting"
+    If the VoltScript Dependency Manager fails, review the information printed to the console. An atlas-settings.json will be required for dependencies pulled from GitHub or from a web server that requires authentication. The dependencies will be downloaded to the .vss directory in the user's home before being copied to the project. If using a dev container, this will be the user's home in the container.

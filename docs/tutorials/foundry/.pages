@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - "Hello World": lab-01.md
+    - "Hello Name": lab-02.md
+    - "Domino REST API": lab-03.md 
+    - "Pre and Post Processors": lab-04.md 

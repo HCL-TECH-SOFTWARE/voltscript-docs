@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - windows-basic.md
+    - windows-rancher.md
+    - mac.md
+    - ubuntu.md

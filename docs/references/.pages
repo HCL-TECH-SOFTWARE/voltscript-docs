@@ -1,0 +1,12 @@
+nav:
+    - index.md
+    - components.md
+#    - new.md
+    - options.md
+    - unsupported.md
+    - whatsnew
+    - dependency-map.md
+    - vses.md
+    - libraries.md
+    - atlas.json and atlas-settings.json schemas: atlas.md
+    - archipelago.md

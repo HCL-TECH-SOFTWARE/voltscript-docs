@@ -1,0 +1,6 @@
+Class|DrapiVSE.GetListEntriesArgs|DRAPIVSE_VSID\DrapiVSE_VSE\GetListEntriesArgs_ObjectClass.html|GetListEntriesArgs
+Class|DrapiVSE.DrapiServer|DRAPIVSE_VSID\DrapiVSE_VSE\DrapiServer_ObjectClass.html|DrapiServer
+Class|DrapiVSE.DrapiServerInfo|DRAPIVSE_VSID\DrapiVSE_VSE\DrapiServerInfo_ObjectClass.html|DrapiServerInfo
+Class|DrapiVSE.DrapiResponse|DRAPIVSE_VSID\DrapiVSE_VSE\DrapiResponse_ObjectClass.html|DrapiResponse
+Class|DrapiVSE.DrapiRequest|DRAPIVSE_VSID\DrapiVSE_VSE\DrapiRequest_ObjectClass.html|DrapiRequest
+Class|DrapiVSE.DrapiDocument|DRAPIVSE_VSID\DrapiVSE_VSE\DrapiDocument_ObjectClass.html|DrapiDocument
