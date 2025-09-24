@@ -1,0 +1,5201 @@
+
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL VoltScript Documentation, tutorials and blog.  Turbocharging LotusScript for HCL Volt MX Go.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/voltscript-docs/tutorials/foundry/lab-03.html">
+      
+      
+        <link rel="prev" href="lab-02.html">
+      
+      
+        <link rel="next" href="lab-04.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Domino REST API - VoltScript Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../assets/css/hljs.css">
+    
+      <link rel="stylesheet" href="../../assets/css/style1.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-169645537-2"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-169645537-2",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-169645537-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/voltmxgo-documentation/go-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#foundry-lab-03-domino-rest-api-integration-service" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/volt-mx-go" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/" target="_blank">Community Forums</a>
+  <!--<a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>-->
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../latest/tutorials/foundry/lab-03.html">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="VoltScript Documentation" class="md-header__button md-logo" aria-label="VoltScript Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/VoltMXGoLogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VoltScript Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Domino REST API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/voltscript-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/voltscript-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../whatsnew/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  What's new
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../howto/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  How-to guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../topicguides/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Topic guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../references/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  References
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="VoltScript Documentation" class="md-nav__button md-logo" aria-label="VoltScript Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/VoltMXGoLogo.png" alt="logo">
+
+    </a>
+    VoltScript Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/voltscript-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/voltscript-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../whatsnew/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    What's new
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            What's new
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/v10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Volt MX Go v10.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/earlyaccess.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Early Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ide/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Visual Studio Code Setup
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visual Studio Code Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide/windows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide/mac.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacOS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide/devcontainer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/vses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Studio Code extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../walkthrough/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Intro to VoltScript
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Intro to VoltScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Simple Program
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-02.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-03a.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-03b.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JsonVSE Extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-04.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reading from DRAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-05.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript JSON Converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../walkthrough/lab-06.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Putting it all Together
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../foundryinstall/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Enabling VoltScript in Volt Foundry
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Enabling VoltScript in Volt Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Intro to VoltScript for Volt Foundry
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Intro to VoltScript for Volt Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-02.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="lab-03.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domino REST API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#duration-40-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duration 40 Min
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema / Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atlasjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      atlas.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltscript-dependency-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      VoltScript Dependency Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      demo data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Company class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertjson-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      convertJson function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populatevss" class="md-nav__link">
+    <span class="md-ellipsis">
+      populate.vss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-for-volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package for Volt Foundry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-volt-foundry-integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Volt Foundry Integration Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatevss" class="md-nav__link">
+    <span class="md-ellipsis">
+      update.vss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-package-for-volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-Package for Volt Foundry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update the Integration Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-04.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pre and Post Processors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../vs-in-foundry/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Writing VoltScript in Volt Foundry
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Writing VoltScript in Volt Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-in-foundry/lab-01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-in-foundry/lab-02.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-in-foundry/lab-03.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identity Service and DRAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    How-to guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/writing/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Write code
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Write code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/vscode.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Studio Code IDE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/libraries.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use VoltScript Library Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/vses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use VoltScript Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/structure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structure your project code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/writing/ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using GitHub Copilot for AI assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/archipelago/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Dependency management
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dependency management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/archipelago/settings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    atlas-settings.json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/archipelago/atlas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    atlas.json
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/archipelago/running.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/running/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Run code
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Run code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/running/voltscript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run from command line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/running/vscode.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run from Visual Studio Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/running/http-server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run HTTP server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/foundry/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Volt Foundry
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Volt Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/prepostprocessor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Write pre/postprocessor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/foundry/integrations/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Integration Services
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Integration Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/integrations/archipelago.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use VS Code Extension Build Development Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/integrations/writing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Write and Package Integration Service Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/integrations/configuring.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure a VoltScript Integration Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/integrations/advanced.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/foundry/integrations/troubleshooting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test and troubleshoot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/foundry/ls-to-vs/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    VoltScript vs LotusScript
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            VoltScript vs LotusScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/sharing/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Share code
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Share code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/sharing/vses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package VoltScript Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/sharing/libraries.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package VoltScript Libraries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/sharing/publish.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish to GitHub or a web server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/language/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Core Language
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Core Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/language/curdir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding CurDir()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/language/errors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Error handling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/language/loops.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loops
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/language/conditionals.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Short-circuiting logical expressions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../howto/extensions/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Extensions
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            VoltScript Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/generate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generate a new VoltScript Extension using VoltScript Interface Designer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/input.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Receive input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/env-vars.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access platform and environment variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/find-files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Find files and managing directories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/read-files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Read and write files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/memory-stream.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    In-memory streaming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/buildingjson.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Parsing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/xmlbuilding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/xmlparsing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XML Parsing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make HTTP REST JSON Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/zulu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process dates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/file-download.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/zip.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process zip files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/hash.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encode and hash content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/encrypt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encryption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/drapi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make Requests to Domino
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/extensions/couch.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make Requests to Couch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/libraries.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Library Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.youtube.com/@CodingCurmudgeons" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Topic guides
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Topic guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/architectural.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural considerations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/writing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing VoltScript code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/foundry/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    VoltScript in Volt Foundry
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            VoltScript in Volt Foundry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/foundry/voltscript-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript in Volt MX Go
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/foundry/foundry-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Services in Volt Foundry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../topicguides/voltscript-extensions/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Extensions
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            VoltScript Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/voltscript-extensions/data-access.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web-based Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/voltscript-extensions/os.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/voltscript-extensions/input.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Managing input parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/voltscript-extensions/hash.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hashes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/libraries.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Library Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/running.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running VoltScript code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topicguides/considerations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Considerations when using VoltScript as middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../references/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/components.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Runtime options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/unsupported.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unsupported functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../references/whatsnew/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    New Language Features
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            New Language Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/getthreadinfo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GetThreadInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/return.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Return
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/tcf.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try/Catch/Finally
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/plusplus.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Number Manipulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/notequal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    != alias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/orelseandalso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Short-Circuit Conditionals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/whatsnew/uuid.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CreateUUID()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/dependency-map.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Map
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/vses.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/libraries.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VoltScript Library Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/atlas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    atlas.json and atlas-settings.json schemas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/archipelago.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Management Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#duration-40-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duration 40 Min
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you will learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema / Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atlasjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      atlas.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltscript-dependency-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      VoltScript Dependency Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      demo data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Company class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertjson-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      convertJson function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populatevss" class="md-nav__link">
+    <span class="md-ellipsis">
+      populate.vss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-for-volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package for Volt Foundry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-volt-foundry-integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Volt Foundry Integration Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updatevss" class="md-nav__link">
+    <span class="md-ellipsis">
+      update.vss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-package-for-volt-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Re-Package for Volt Foundry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-the-integration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update the Integration Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="foundry-lab-03-domino-rest-api-integration-service">Foundry Lab 03 - Domino REST API Integration Service</h1>
+<h2 id="duration-40-min">Duration 40 Min</h2>
+<h2 id="what-you-will-learn">What you will learn</h2>
+<p>You'll learn how to perform actions on data from Domino.</p>
+<p>The first endpoint will be to populate a Domino database with demo data, which could subsequently be used as a REST service to bulk create documents based on a similar format - a process that might historically have been done by emailing a CSV file to the Domino developer who would run an import agent.</p>
+<p>The next endpoint will change the company name on a Company document and update the name on related Contact documents. In Notes Client, this would be performed in a PostSave event. In a traditional Domino web interface, this would be completed in a WebQuerySave agent. In an XPages application, the PostSave event could be used, but more experienced developers would follow a similar approach to what we build here - write code to update the Company and update the related Contact documents. A completely coded approach could also be taken in Notes Client, but would use NotesUIWorkspace's Prompt or DialogBox to retrieve the new company name. But as we've explained, interaction with the end user is not possible from Volt Foundry.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The key difference with code running on a Domino server is the approach for updating related documents: in LotusScript / SSJS / Java the developer will retrieve a view, get all documents based on a key and iterate the collection. Obviously that is a sub-optimal approach when the code is running anywhere other than the Domino server - separate HTTP requests are required for retrieving the collection and updating each document. DQL allows updates on multiple documents and this is the process used by Domino REST API's bulk update endpoints. This is the best-practice approach because the query for related documents and update is performed on the Domino server.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
+<p>This exercise assumes that:</p>
+<ul>
+<li>You're familiar with creating VoltScript integration services, as covered in Foundry Labs 01 and 02.</li>
+<li>You have a Domino server configured with Domino REST API running and OAuth enabled.<ul>
+<li>The <a href="https://opensource.hcltechsw.com/Domino-rest-api/howto/VoltMX/setupoauthnsf.html" rel="noopener noreferrer" target="_blank">oauth.nsf has been set up</a>.</li>
+<li>The <a href="https://opensource.hcltechsw.com/Domino-rest-api/howto/IdP/configuredrapiIdP.html#procedure" rel="noopener noreferrer" target="_blank">oauth.json has been added to keepconfig.d</a>.</li>
+</ul>
+</li>
+<li>You're familiar with creating a scope, schema and application in Domino REST API.</li>
+</ul>
+</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="schema-scope">Schema / Scope</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following steps assume you're familiar with creating schemas and scopes using Domino REST API. For more information, see the <a href="https://opensource.hcltechsw.com/Domino-rest-api/tutorial/index.html" rel="noopener noreferrer" target="_blank">Domino REST API tutorials</a>.</p>
+<p>If you have have already completed <a href="../walkthrough/lab-04.html">Intro to VoltScript &gt; Lab 04 - Connecting to a DRAPI Scope</a>, go ahead and skip to the next section: <a href="#application">Application and Oauth</a>.</p>
+</div>
+<ol>
+<li>Download the <a href="https://github.com/HCL-TECH-SOFTWARE/voltscript-samples/blob/main/samples/intro-lab4/assets/compcont.ntf" noreferrer_="noreferrer”" rel="&quot;noopener" target="_new">Demo Companies and Contacts Template</a> and save it locally.  </li>
+<li>Create a New Database instance from the template on the HCL Domino server upon which your HCL Domino REST API is installed, and set the ACL appropriately for your DRAPI instance.  </li>
+<li>Create a Scope called <code>companiesandcontacts</code>, and associate it with the <code>demo_companies_and_contacts</code> Schema in your newly created database.</li>
+</ol>
+<h3 id="application">Application</h3>
+<ol>
+<li>Log into Volt Foundry.</li>
+<li>
+<p>In the Apps page, click <strong>ADD NEW</strong>.</p>
+<p><img alt="ADD NEW" src="../../assets/images/tutorials/foundry-lab01-01.png" /></p>
+</li>
+</ol>
+<h3 id="integration-service">Integration Service</h3>
+<ol>
+<li>
+<p>Create a new VS Code VoltScript Workspace folder called <strong>foundry-domino</strong>.</p>
+<ol>
+<li>Open Visual Studio Code.</li>
+<li>
+<p>From the <strong>Explorer</strong> view, click <strong>Open Folder</strong>.</p>
+<p><img alt="VoltScript Language Support" src="../../assets/images/tutorials/lab01-02.png" style="height:250px" /></p>
+</li>
+<li>
+<p>Create a new folder in your user directory, with the name stated above.</p>
+</li>
+<li>Select the newly created folder to open in VS Code.</li>
+</ol>
+</li>
+</ol>
+<h4 id="atlasjson">atlas.json</h4>
+<ol>
+<li>Right-click in the empty pane and select <strong>New File</strong> from the context menu.</li>
+<li>Name the file "atlas.json".</li>
+<li>Type "foundry-atlas" and accept the snippet.</li>
+<li>Set name to "foundry-lab-domino".</li>
+<li>Set description to "DRAPI in Foundry Lab".</li>
+<li>Set displayName to "foundry-lab-domino".</li>
+<li>Complete publisher and authors.</li>
+<li>Delete repo and library elements.</li>
+<li>Set version to "1.0.0".</li>
+<li>Add array elements in mainScripts for "populate.vss" and "update.vss".</li>
+<li>Add the usual repositories to the <strong>repositories</strong> array for <a href="../../references/vses.html#repository">VSEs</a> and <a href="../../references/libraries.html#repository">Library Modules</a>.</li>
+<li>In the <strong>dependencies</strong> array, add VoltScript JSON Converter and VoltScript VoltMX Middleware:<ol>
+<li>Set library to "voltscript-voltmx-middleware".</li>
+<li>Set version to "latest".</li>
+<li>Set module to "VoltMXObjects.vss".</li>
+<li>Set repository to "hcl-github".</li>
+<li>Set library to "voltscript-json-converter".</li>
+<li>Set version to "latest".</li>
+<li>Set module to "VoltScriptJsonConverter.vss".</li>
+<li>Set repository to "hcl-github".</li>
+</ol>
+</li>
+<li>Add an entry to the <strong>vseDependencies</strong> object.<ol>
+<li>Create a JSON element with the label <strong>DrapiVSE</strong>.</li>
+<li>Refer to the <a href="../../references/vses.html#dependency">DrapiVSE Dependency Documentation</a> for the current <code>library</code>, <code>version</code>, <code>module</code>, and <code>repository</code> values.</li>
+</ol>
+</li>
+<li>Delete unitTestScripts, integrationTestScripts, and testDependencies elements.</li>
+<li>
+<p>Save the atlas.json.</p>
+<details class="example">
+<summary>The final atlas.json should look like this:</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foundry-lab-domino&quot;</span><span class="p">,</span><span class="w">           </span><span class="c1">// REQUIRED: Enter a short name for your VoltScript project, e.g. &quot;Demo1&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DRAPI in Foundry Lab&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Enter a longer description, e.g. &quot;My first demo project&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;foundry-lab-domino&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// A longer name to refer to the project, e.g. &quot;Demo 1&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Apache 2.0&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1">// A license to publish the project under.</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">                                </span><span class="c1">// If you want this to be used by others, Apache 2.0 or MIT are recommended</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HCL America, Inc.&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Copyright owner</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&quot;authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">        </span><span class="c1">// REQUIRED: An array of authors, can be names or emails</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="s2">&quot;YOUR NAME HERE&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Current version for this project, used with dependency management to find the modules</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&quot;sourceDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;src&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED: Directory where mainScripts are located</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">&quot;testDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Directory where unitTestScripts and integrationTestScripts are located</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">&quot;libsDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;libs&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Directory where VoltScript Library Modules and shared scripts are located</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">&quot;vsesDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vses&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Directory where VoltScript Extensions are located</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">&quot;mainScripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">    </span><span class="c1">// REQUIRED: Main scripts with Sub Initialize. Used to sync any additional files between</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                        </span><span class="c1">// sourceDir and testDir, if libsDir not set</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="s2">&quot;populate.vss&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="s2">&quot;update.vss&quot;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">&quot;repositories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">       </span><span class="c1">// Repositories in which to search for any dependencies</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hcl-github&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// REQUIRED: Unique ID matching &quot;repository&quot; in a dependency in this file.</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">                            </span><span class="c1">// Also matches label of a JSON object in atlas-settings, which gives any credentials to use to access this repository</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;github&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// REQUIRED: Currently &quot;github&quot; or &quot;webserver&quot; are supported</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.github.com/repos/HCL-TECH-SOFTWARE&quot;</span><span class="w"> </span><span class="c1">// REQUIRED: Base URL of the repository</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;volt-mx-marketplace&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;marketplace&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://community.demo-hclvoltmx.com/marketplace&quot;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">            </span><span class="nt">&quot;library&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;voltscript-voltmx-middleware&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Folder to be appended to the base URL when dependency management tries to download modules</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latest&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Version number of modules to download. Currently only supports explicit version or &quot;latest&quot;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">            </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VoltMXObjects.vss&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// REQUIRED: Filename of a VoltScript Library Module to download</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">            </span><span class="nt">&quot;repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hcl-github&quot;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">            </span><span class="nt">&quot;library&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;voltscript-json-converter&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latest&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">            </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VoltScriptJsonConverter.vss&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">            </span><span class="nt">&quot;repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;hcl-github&quot;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="nt">&quot;vseDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// VoltScript Extension dependencies. NOTE: These also require a label</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">        </span><span class="nt">&quot;DrapiVSE&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">        </span><span class="c1">// REQUIRED: This label will be what you use in &quot;UseVSE&quot; statements</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">            </span><span class="nt">&quot;library&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DrapiVSE VoltScript Extension&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Folder to be appended to the base URL when dependency management tries to download modules</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">            </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// REQUIRED: Version number of modules to download. Currently only supports explicit version or &quot;latest&quot;</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">            </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drapivse&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// REQUIRED: Filename of a VoltScript Library Module to download</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">            </span><span class="nt">&quot;repository&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;volt-mx-marketplace&quot;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+</li>
+</ol>
+<h4 id="voltscript-dependency-manager">VoltScript Dependency Manager</h4>
+<ol>
+<li>
+<p>From the <strong>Command Palette</strong> in VS Code, run "VoltScript: Run Dependency Setup".<br />
+This will ensure that (among other things) a <strong>.vss</strong> folder is created within your VoltScript workspace.  </p>
+</li>
+<li>
+<p>From the <strong>Command Palette</strong>, run "VoltScript: Install Dependencies".</p>
+</li>
+<li>Enter the project directory, confirm atlas-settings.json and atlas.json locations.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Your project should now have "src", "test", "libs", and "vses" directories.</p>
+<ul>
+<li>The src directory is empty.</li>
+<li>The test directory is empty.</li>
+<li>The libs directory has been populated with <code>VoltScriptJsonConverter.vss</code>, <code>VoltMXObjects.vss</code> and <code>VoltScriptCollections.vss</code>. VoltScriptCollections is a downstream dependency of VoltMXObjects.</li>
+<li>The vses directory has been populated with ddl and so files for DrapiVSE, ContextVSE, JsonVSE - these are downstream dependencies used by VoltMXObjects, automatically picked up because of its atlas.json.</li>
+<li>A new file, <code>seti.ini</code>, has been created. This contains mapping for the VoltScript Extensions (VSEs) and will be used for mapping <code>UseVSE</code> statements.</li>
+<li>A new file, <code>effective-atlas.json</code>, has been added to the root of the directory. This contains the aggregated settings for the project.</li>
+</ul>
+</div>
+<h4 id="demo-data">demo data</h4>
+<ol>
+<li>Create a file in the <strong>src</strong> directory called <code>demodata.json</code>.</li>
+<li>Paste in the JSON from <a href="../../assets/downloads/company-contacts.json" rel="noopener noreferrer" target="_blank">company-contacts.json</a>.</li>
+<li>Save the file.</li>
+</ol>
+<h4 id="contact-class">Contact class</h4>
+<ol>
+<li>Create a file in <strong>libs</strong> directory called <code>functions.vss</code>. This will hold reusable code.</li>
+<li>Set <code>Option Public</code> and <code>Option Declare</code>.</li>
+<li>Add <code>Use "VoltMXObjects"</code> and <code>Use "VoltScriptJsonConverter"</code> directives.</li>
+<li>Create a class called <code>Contact</code>.</li>
+<li>Declare four public string variables - <code>firstName</code>, <code>lastName</code>, <code>email</code> and <code>company</code>.</li>
+</ol>
+<h4 id="company-class">Company class</h4>
+<ol>
+<li>In <code>functions.vss</code> create a class called <code>Company</code>.</li>
+<li>Declare two public string variables - <code>company</code> and <code>address</code>.</li>
+<li>Declare a public variant variable - <code>contacts</code>.</li>
+<li>Add a sub called <code>addToJsonArray</code> taking a single argument <code>jsonArr as JsonObject</code>.</li>
+<li>
+<p>Add the following code:</p>
+<pre class="hljs"><code>Dim childDoc as JsonObject
+Dim mainDoc as New JsonObject()
+
+Call mainDoc.insertValue("Form", "Company")
+Call mainDoc.insertValue("Company", Me.company)
+Call mainDoc.insertValue("Address", me.address)
+Call jsonArr.appendToJsonArray(mainDoc)
+
+ForAll contact in contacts
+    Set childDoc = new JsonObject()
+    Call childDoc.insertValue("Form", "Contact")
+    Call childDoc.insertValue("Company", Me.company)
+    Call childDoc.insertValue("FirstName", contact.firstName)
+    Call childDoc.insertValue("LastName", contact.lastName)
+    Call childDoc.insertValue("Email", contact.email)
+    Call jsonArr.appendToJsonArray(childDoc)
+End ForAll</code></pre>
+</li>
+</ol>
+<h4 id="convertjson-function">convertJson function</h4>
+<ol>
+<li>In <code>functions.vss</code> create a function called <code>convertJson()</code> that takes no arguments and returns a JsonObject.</li>
+<li>
+<p>For the body of the function, enter:</p>
+<pre class="hljs"><code>Dim jsonObj as JsonObject
+Dim temp as JsonObject
+Dim company as Company
+
+Dim parser as New JsonParser()
+Dim docs as New JsonObject(True)
+Dim helper as New JsonConversionHelper()
+Dim contactConverter as New JsonBasicObjectArrayConverter("Contact", "../libs/functions")
+
+' Load file
+Call parser.loadFromFile(PROJECT_DIR &amp; "/src/demodata.json")
+Set jsonObj = parser.getRootObject()
+
+'Deserialize Customers
+Call helper.withCustomConverter("contacts", contactConverter)
+ForAll child in jsonObj.getChildren()
+    Set temp = child
+    Set company = helper.toObject(temp, "Company", "../libs/functions").fromJson(temp)
+    Call company.addToJsonArray(docs)
+End ForAll
+
+Return docs</code></pre>
+</li>
+<li>
+<p>Save the file.</p>
+</li>
+</ol>
+<p>The code loads the JSON and seeds a <code>JsonConversionHelper</code> with a <code>BasicObjectArrayConverter</code> to convert the <code>contacts</code> array to <code>Contact</code> objects. This only populates the first name, last name, and email. The code iterates each JSON object and creates a <code>Company</code> object for each, populating company, address and the contacts.</p>
+<h4 id="populatevss">populate.vss</h4>
+<ol>
+<li>Create a file called <code>populate.vss</code> in src directory.</li>
+<li>Type "foundry" and accept the Foundry Boilerplate snippet.</li>
+<li>Add a directive to use the <code>DrapiVSE</code> VoltScript Extension</li>
+<li>Add a directive to use functions library you just saved.</li>
+<li>
+<p>Add the following declarations at the top of the <code>Sub Initialize</code>:</p>
+<pre class="hljs"><code>Dim docs as JsonObject
+Dim request as DrapiRequest
+Dim responseObj as JsonObject
+
+Dim payload as New JsonObject()
+Dim server as New DrapiServer()
+Dim parser as new JsonParser()
+
+Dim response as DrapiResponse
+
+Dim username as String 
+Dim password as String </code></pre>
+</li>
+<li>
+<p>Add the following code between the <code>START OF FOUNDRY HANDLER</code> and <code>END OF FOUNDRY HANDLER</code>:</p>
+<pre class="hljs"><code>server.serverURL = VoltMXRequest.getInputParam("serverURL")
+username = VoltMXRequest.getInputParam("username")
+password = VoltMXRequest.getInputParam("password")
+
+Call server.login(username, password)
+
+Set request = server.createRequest("companiesandcontacts")
+Set docs = convertJson()
+Call payload.insertValue("documents", docs)
+
+Set response = request.bulkCreateDocuments(payload.toString(false))
+Call parser.loadFromJson(response.ContentBody)
+Set responseObj = parser.getRootObject()
+
+VoltMxResult.httpStatusCode = 200
+Call VoltMXResult.result.insertValue("result", responseObj.childCount &amp; " docs created")</code></pre>
+</li>
+<li>
+<p>Save the file.</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In this exercise we will be logging into Foundry with named credentials. This simulates authenticating with a service account. These credentials could be provided in multiple ways:</p>
+<ul>
+<li>passed into each request (not recommended).</li>
+<li>session variables set during a basic authentication call to Foundry.</li>
+<li>request variables retrieved during a preprocessor from environment variables or other stored location.</li>
+<li>session variables lazy-loaded during a preprocessor.</li>
+<li>hard-coded credentials in the script, as done here. Admins may wish to add more restricted access to Foundry console to secure the credentials.</li>
+</ul>
+<p>If you want to run as the current user, the better approach would be to use an <strong>Identity Service</strong>, as you would have done if you have configured Domino Adapter for other Volt MX Go tutorials. This will be done in the <a href="../vs-in-foundry/lab-03.html#configure-an-identity-service">Identity Service and DRAPI tutorial</a>.</p>
+</div>
+<h4 id="package-for-volt-foundry">Package for Volt Foundry</h4>
+<ol>
+<li>From the <strong>Command Palette</strong>, run "VoltScript: Package for Foundry".</li>
+<li>Enter the project directory.</li>
+<li>Confirm atlas.json locations.</li>
+<li>Enter <code>src/demodata.json</code> for additional files to package.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>A file will be created in the root of the project called "foundry-lab.1.0.0.zip". The zip name comprises the project name and the project version from the atlas.json.</p>
+</div>
+<h4 id="create-volt-foundry-integration-service">Create Volt Foundry Integration Service</h4>
+<ol>
+<li>Log into Volt Foundry.</li>
+<li>On the <strong>Apps</strong> page, click <strong>ADD NEW</strong>.</li>
+<li>
+<p>On <strong>Configure Services</strong> tab, click the <strong>Integration</strong> tab and then click <strong>CONFIGURE NEW</strong>.</p>
+<p><img alt="CONFIGURE NEW" src="../../assets/images/tutorials/vs-in-foundry/integration-configurenew.png" /></p>
+</li>
+<li>
+<p>Set the <strong>Name</strong> to "foundry-drapi-vs".</p>
+</li>
+<li>Select "VoltScript" for <strong>Service Type</strong>.</li>
+<li>Click <strong>Upload New</strong> and select the zip file you just created.</li>
+<li>Click <strong>SAVE &amp; ADD OPERATION</strong>.</li>
+<li>Set the name to "populate".</li>
+<li>Select "populate.vss" as the file.</li>
+<li>Click <strong>ADD OPERATION</strong>.</li>
+<li>Scroll down to the <strong>Request Input</strong> tab and click <strong>+ Add Parameter</strong>.</li>
+<li>Set the <strong>NAME</strong> to <code>serverURL</code>.</li>
+<li>
+<p>Set the <strong>TEST VALUE</strong> to your domino server's Domino REST API base url, for example <code>http://localhost:8880/api/v1</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The URL needs to end with <code>/api/v1</code>.</p>
+</div>
+</li>
+<li>
+<p>Add a parameter for <code>username</code> and set the <strong>TEST VALUE</strong> to your username for your DRAPI Server.  </p>
+</li>
+<li>Add a parameter for <code>password</code> and set the <strong>TEST VALUE</strong> to your password for your DRAPI Server.</li>
+<li>Verify that the <strong>ENCODE</strong> checkbox for all parameters is checked.</li>
+<li>Scroll down to the bottom of the operation and click <strong>SAVE AND FETCH RESPONSE</strong>.</li>
+<li>
+<p>On <strong>Identity Backed Response</strong> tab, click <strong>AUTHORIZE</strong> to authenticate to the Domino REST API.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The output result shows the following JSON object:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;739 docs created&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;opstatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;httpStatusCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Verify by opening the database with Notes Client / Nomad Web. The "companies" view will have Company documents in it. The "contacts" view will have Contact documents which have the company name. This process can be used to seed a test database with demo documents or, by passing a JSON payload, it can be used to replace an import agent with a REST service endpoint.</p>
+</div>
+<div class="admonition advanced">
+<p class="admonition-title">Advanced</p>
+<p>Further enhancements are possible:</p>
+<ul>
+<li>Add proper error handling.</li>
+<li>Unit testing could be added to test the <code>convertJson</code> function.</li>
+<li>You could test the main code to populate the database. You would move it into a function, with the <code>DrapiServer()</code> object and variables passed. The <code>DrapiServer</code> would need to be manually logged in using <code>DrapiServer.login(*username*,*password*)</code> before being passed to the function.</li>
+<li>The REST service can be enhanced further to validate the incoming JSON, in the same way that an import agent would validate each line of a CSV file. VoltScript Testing Framework can be used to perform validation</li>
+</ul>
+</div>
+</li>
+</ol>
+<h4 id="updatevss">update.vss</h4>
+<ol>
+<li>Create a file called <code>update.vss</code> in src directory.</li>
+<li>Type "foundry" and accept the Foundry Boilerplate snippet.</li>
+<li>Add directives to use the <code>DrapiVSE</code> VoltScript Extension and the functions library.</li>
+<li>
+<p>Add the following declarations at the top of the <code>Sub Initialize</code>:</p>
+<pre class="hljs"><code>Dim request as DrapiRequest
+Dim doc as DrapiDocument
+Dim companyPayload as JsonObject
+
+Dim parser as New JsonParser()
+Dim server as New DrapiServer()
+Dim replaceItems as New JsonObject()
+
+Dim response as DrapiResponse
+Dim newCompanyName As String
+Dim oldCompanyName As String
+Dim query as String
+Dim unid as String
+
+Dim username as String 
+Dim password as String</code></pre>
+</li>
+<li>
+<p>Between the two comment blocks, enter the following code:</p>
+<pre class="hljs"><code>unid = VoltMXRequest.getInputParam("unid")
+newCompanyName = VoltMXRequest.getInputParam("CompanyName")
+server.serverURL = VoltMXRequest.getInputParam("serverURL")
+username = VoltMXRequest.getInputParam("username")
+password = VoltMXRequest.getInputParam("password")
+Call server.login(username, password)
+
+Set request = server.createRequest("foundrycontacts")
+Set doc = request.getDocument(unid)
+
+Call parser.loadFromJson(doc.JsonValue)
+Set companyPayload = parser.getRootObject()
+oldCompanyName = companyPayload.getChild("Company").scalarValue
+Call companyPayload.insertValue("Company", newCompanyName)
+doc.JsonValue = companyPayload.toString(false)
+Call VoltMxResult.result.insertValue("companyUpdated", doc.put("", "default"))
+
+query = "Form = 'Contact' and Company = '" &amp; oldCompanyName &amp; "'"
+Call replaceItems.insertValue("Company", newCompanyName)
+Set response = request.bulkPatchDocuments(query, replaceItems.toString(false), "html", "default", 5000, True, True)
+Call parser.loadFromJson(response.ContentBody)
+VoltMxResult.httpStatusCode = 200
+Call VoltMxResult.result.insertValue("contactsUpdated", parser.getRootObject())</code></pre>
+</li>
+<li>
+<p>Save the file.</p>
+</li>
+</ol>
+<h4 id="re-package-for-volt-foundry">Re-Package for Volt Foundry</h4>
+<ol>
+<li>From the <strong>Command Palette</strong>, run "VoltScript: Package for Foundry".</li>
+<li>Enter the project directory.</li>
+<li>Confirm atlas.json locations.</li>
+<li>Enter <code>src/demodata.json</code> for additional files to package.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>A file is created in the root of the project called "foundry-lab.1.0.0.zip". The zip name comprises the project name and the project version from the atlas.json.</p>
+</div>
+<h4 id="update-the-integration-service">Update the Integration Service</h4>
+<ol>
+<li>Log into Volt Foundry.</li>
+<li>On the <strong>Apps</strong> page, select the app you created.</li>
+<li>On <strong>Configure Services</strong> tab, click the <strong>Integration</strong> tab.</li>
+<li>Click the <strong>Service Definition</strong> tab for the "foundry-drapi-vs" integration service.</li>
+<li>Click <strong>Upload New</strong> and select the zip file you just created. You will receive a warning that this will update the endpoint operations. Click <strong>OK</strong>.</li>
+<li>Click <strong>SAVE &amp; ADD OPERATION</strong>.</li>
+<li>Set the name to "update".</li>
+<li>Select "update.vss" as the file.</li>
+<li>Click <strong>ADD OPERATION</strong>.</li>
+<li>Scroll down to the <strong>Request Input</strong> tab and click <strong>+ Add Parameter</strong>.</li>
+<li>Add the parameters for <code>serverURL</code>, <code>username</code>, and <code>password</code> in the same manner as you did for the <strong>populate</strong> service.</li>
+<li>Click <strong>+ Add Parameter</strong> and set the <strong>NAME</strong> to <code>unid</code>.</li>
+<li>Copy the UNID of a Company document in the Domino database.</li>
+<li>Set the <strong>TEST VALUE</strong> to the UNID.</li>
+<li>Click <strong>+ Add Parameter</strong> and set the <strong>NAME</strong> to <code>CompanyName</code>.</li>
+<li>Set the <strong>TEST VALUE</strong> to a modified company name.</li>
+<li>
+<p>Scroll down to the bottom of the operation and click <strong>SAVE AND FETCH RESPONSE</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The output result shows a JSON object with:</p>
+<ul>
+<li><code>httpStatusCode</code> set to 200.</li>
+<li><code>companyUpdated</code> set to <code>true</code>.</li>
+<li><code>contactsUpdated</code> containing a JSON object of results for each contact update - UNID, success message, and status details.</li>
+</ul>
+</div>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-2025, HCL America, Inc. | <a href="https://www.hcl-software.com/legal/privacy" target="_blank">Privacy Statement</a> | <a href="https://www.hcl-software.com/legal/terms-use" target="_blank">Terms of Use</a> <br/> <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+<h2>Cookie consent</h2>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+      <button class="md-button md-button--primary">Accept</button>  
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+</div>
+          
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/js/highlight.js"></script>
+      
+        <script src="../../assets/js/init.js"></script>
+      
+    
+  </body>
+</html>

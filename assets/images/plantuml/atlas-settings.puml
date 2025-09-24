@@ -1,0 +1,32 @@
+@startjson
+{
+    "repo1": {
+        "type": "github",
+        "token": "ghp_VPAeJYeJq7eSghDx9PbDaExLqo4RdH2oYU2g"
+    },
+    "repo2": {
+        "type": "github",
+        "token": "${env.TOKEN}"
+    },
+    "repo3": {
+        "type": "webserver",
+        "credentials": "cm9vdHVzZXI6cGFzc3dvcmQ="
+    },
+    "repo4": {
+        "type": "webserver",
+        "credentials": "${env.CREDENTIALS}"
+    },
+    "repo5": {
+        "type": "marketplace",
+        "username": "John.Doe@acme.com",
+        "password": "D0eRayM£",
+        "authUrl": "https://accounts.auth.demo-hclvoltmx.net/login"
+    },
+    "repo6": {
+        "type": "marketplace",
+        "username": "${env.USERNAME}",
+        "password": "${env.PASSWORD}",
+        "authUrl": "https://accounts.auth.demo-hclvoltmx.net/login"
+    }
+}
+@endjson

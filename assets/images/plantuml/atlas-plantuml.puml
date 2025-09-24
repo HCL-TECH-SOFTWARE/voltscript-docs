@@ -1,0 +1,85 @@
+@startjson
+#highlight "name"
+#highlight "description"
+#highlight "authors"
+#highlight "version"
+#highlight "mainScripts"
+#highlight "sourceDir"
+#highlight "repositories" / "0" / "id"
+#highlight "repositories" / "0" / "type"
+#highlight "repositories" / "0" / "url"
+#highlight "repositories" / "1" / "id"
+#highlight "repositories" / "1" / "type"
+#highlight "repositories" / "1" / "url"
+#highlight "dependencies" / "0" / "library"
+#highlight "dependencies" / "0" / "version"
+#highlight "dependencies" / "0" / "module"
+#highlight "testDependencies" / "0" / "library"
+#highlight "testDependencies" / "0" / "version"
+#highlight "testDependencies" / "0" / "module"
+#highlight "vseDependencies" / "JsonVSE" / "library"
+#highlight "vseDependencies" / "JsonVSE" / "version"
+#highlight "vseDependencies" / "JsonVSE" / "module"
+{
+    "name": "Demo1",
+    "description": "My first demo project",
+    "displayName": "Demo 1",
+    "license": "Apache 2.0",
+    "publisher": "HCL Software",
+    "authors": [
+        "Paul Withers"
+    ],
+    "repo": "https://github.com/HCL-TECH-SOFTWARE/voltscript-testing",
+    "library": "voltscript-testing",
+    "version":"1.0.1",
+    "sourceDir": "src",
+    "testDir": "test",
+    "libsDir": "libs",
+    "vsesDir": "vses",
+    "mainScripts": [
+        "main.vss"
+    ],
+    "unitTestScripts": [
+        "unittests.vss"
+    ],
+    "integrationTestScripts": [],
+    "repositories": [
+        {
+            "id": "public-github",
+            "type": "github",
+            "url": "https://api.github.com/repos/hcl-tech-software"
+        },
+        {
+            "id": "voltmx-marketplace",
+            "type": "webserver",
+            "url": "https://community.demo-hclvoltmx.com/marketplace"
+        }
+    ],
+    "dependencies": [
+        {
+            "library": "voltscript-json-converter",
+            "version": "latest",
+            "module": "VoltScriptJsonConverter.vss"
+        }
+    ],
+    "testDependencies": [
+        {
+            "library": "voltscript-testing",
+            "version": "latest",
+            "module": "VoltScriptTesting.vss"
+        }
+    ],
+    "vseDependencies": {
+        "JsonVSE": {
+            "library": "JsonVSE VoltScript Extension",
+            "version": "1.0.2",
+            "module": "jsonvse",
+            "repository": "voltmx-marketplace"
+        }
+    },
+    "runtimePlatforms": [
+        "Windows64",
+        "LINUX"
+    ]
+}
+@endjson

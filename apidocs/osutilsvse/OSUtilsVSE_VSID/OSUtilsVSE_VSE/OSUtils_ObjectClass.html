@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!-- {{vsidgenerated}} -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Class: OSUtils</title>
+	<meta name="date" content="2025-04-24">
+	<meta name="keywords" content="GetEnvironment()"><meta name="keywords" content="GetFilesInDir()"><meta name="keywords" content="GetFileSize()"><meta name="keywords" content="IsDirectory()"><meta name="keywords" content="IsFile()"><meta name="keywords" content="IsWritable()"><meta name="keywords" content="MakeDirectories()"><meta name="keywords" content="New()"><meta name="keywords" content="RegisterVSEPath()"><meta name="keywords" content="RemoveDir()"><meta name="keywords" content="SetEnvironment()"><meta name="keywords" content="HomeDir()"><meta name="keywords" content="Platform()"><meta name="keywords" content="TempDir()"><meta name="keywords" content="OSUtilsVSE.OSUtils Class">
+	<link rel="stylesheet" type="text/css" href="..\..\resources/vsid.css" title="balistyle">
+	<script type="text/javascript" src="..\..\resources/vsid.js"></script>
+</head>
+<body>
+<script type="text/javascript"></script>
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+
+
+<header id="masterHeader" class="dark master-header dark-master">
+	<div id="header-topbar" class="header-topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl" rel="nofollow"><img src="..\..\resources/hcl-white.png" class="img-responsive"></a>
+				</div>
+				<div class="col-xs-6 text-right">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl-tech" rel="nofollow">HCL Software</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav">
+	<a name="navbar.top">
+	<!--   -->
+	</a>
+	<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+	<a name="navbar.top.firstrow">
+	<!--   -->
+	</a>	
+	<ul class="navList" title="Navigation">
+		<!-- -->
+		<li><a href="..\OSUtilsVSE_VSID.html" title="Navigate to OSUtilsVSE">OSUtilsVSE</a></li><li><a href="..\OSUtilsVSE_VSE.html" title="Navigate to OSUtilsVSE.OSUtilsVSE">OSUtilsVSE</a></li> 
+		<li class="navBarCell1Rev">OSUtils</li>
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+	<!-- --> 
+	</ul>
+	<div><!--  -->
+		<script type="text/javascript"><!--
+		navcontentLink = document.getElementById("navcontent_navbar_top");
+		if (!!navcontentLink) {
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		}
+		  //-->
+		</script>
+	</div>
+	<div>
+		<ul class="subNavList">
+			
+		</ul>
+	</div>
+	<a name="skip.navbar.top">
+	<!--   -->
+	</a>
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<!-- Class -->
+
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+	<h1 title="Class OSUtils" class="title">Public Class OSUtils</h1>
+</div>
+
+<div class="contentContainer">
+	<ul class="inheritance">
+		<!-- --> 
+
+		<ul class="inheritance">
+		<!-- --> 
+
+			<ul class="inheritance">
+				<li><h2>OSUtilsVSE.OSUtils</h2></li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr />
+
+	<div class="description">	<ul class="blockList">		<li class="blockList">			<div class="comments"><!-- comment --><pre>Class for interacting with OS elements.<br />A &quot;~&quot; at the start of a path will be treated as the current user&apos;s home directory.</pre></div>			<hr />		</li>	</ul></div>
+	<ul class="blockList">	<li class="blockList">		<a name="class.summary"><!--   --></a>		<h3>Class Summary</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary Table">			<thead>						</thead>			<tbody>			<tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Project ID</span></td><td class="colLast">85258A090061F374862589090039B351</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Version</span></td><td class="colLast">3</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class ID</span></td><td class="colLast">85258A090061F374862589090039D370</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">VSE Class ID</span></td><td class="colLast">2</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class Type</span></td><td class="colLast">Base</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Attributes</span></td><td class="colLast"></td></tr>			</tbody>		</table>	</li></ul>
+	
+	<div class="summary">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				 
+				
+				<ul class="blockList">	<li class="blockList">		<a name="properties.summary"><!--   --></a>		<h3>Property Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Property Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.Get.HomeDir-">HomeDir</a> (Get)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.Get.Platform-">Platform</a> (Get)</span> As String</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.Get.TempDir-">TempDir</a> (Get)</span> As String</code></td></tr>			</tbody>		</table>	</li></ul>  
+				
+				<ul class="blockList">	<li class="blockList">		<a name="methods.summary"><!--   --></a>		<h3>Method Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.GetEnvironment-">GetEnvironment</a></span>(EnvVar As String) As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.GetFilesInDir-">GetFilesInDir</a></span>(DirPath As String, FileSpec As String) As String Array</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.GetFileSize-">GetFileSize</a></span>(Path As String) As Double</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.IsDirectory-">IsDirectory</a></span>(Path As String) As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.IsFile-">IsFile</a></span>(Path As String) As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.IsWritable-">IsWritable</a></span>(Path As String) As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.MakeDirectories-">MakeDirectories</a></span>(Path As String) As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.New-">New</a></span>() As OSUtils</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.RegisterVSEPath-">RegisterVSEPath</a></span>() As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.RemoveDir-">RemoveDir</a></span>(Path As String, Force As Boolean) As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#OSUtilsVSE.OSUtils.SetEnvironment-">SetEnvironment</a></span>(EnvVar As String, Value As String) As Boolean</code></td></tr>			</tbody>		</table>	</li></ul> 
+			</li>
+		</ul>
+	</div>
+
+	<div class="details">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				
+				<!-- ============ PROPERTY DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="property.detail"><!--   --></a>		<h3>Properties Detail</h3>		<!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.Get.HomeDir-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.Get.HomeDir"><!--   --></a>		<h4>HomeDir (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="HomeDir method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get HomeDir<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.Get.HomeDir.comments"><!--   --></a>Get the user&apos;s home directory, HOME environment variable on Linux, USERPROFILE on Windows.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.Get.Platform-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.Get.Platform"><!--   --></a>		<h4>Platform (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="Platform method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get Platform<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.Get.Platform.comments"><!--   --></a>&quot;W64&quot; or &quot;LINX&quot;, calling and returning the value from getThreadInfo(13).</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.Get.TempDir-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.Get.TempDir"><!--   --></a>		<h4>TempDir (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="TempDir method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get TempDir<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.Get.TempDir.comments"><!--   --></a>Gets the temp directory for the operating system.</td></tr>				</tbody>		</table>			</li></ul>	</li></ul>
+				<!-- ============ METHOD DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="method.detail"><!--   --></a>		<h3>Methods Detail</h3>		<!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.GetEnvironment-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.GetEnvironment"><!--   --></a>		<h4>GetEnvironment</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="GetEnvironment method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function GetEnvironment<em>(EnvVar As String)</em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.GetEnvironment.comments"><!--   --></a>Gets an environment variable. OSUtils uses a snapshot of environment variables that is separate to the snapshot used by the core runtime. <br />So if you set an environment variable using OSUtils, you must use OSUtils to retrieve the updated value.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.GetEnvironment.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>EnvVar</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Environment variable&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.GetEnvironment.codesample"><!--   --></a><pre class="codesample">%REM<br />    Getting the home directory the &quot;harder&quot; way. Just use OSutils.homeDir<br />%END REM<br />Dim OSUtils as New OSUtils()<br />Dim platform as String<br />Dim envVar as String<br />Dim homeDir as String<br /> <br />platform = OSUtils.platform<br />Select Case platform<br />Case &quot;Windows64&quot;:<br />    envVar = &quot;USERPROFILE&quot;<br />Case &quot;LINUX&quot;:<br />    envVar = &quot;HOME&quot;<br />Case Else<br />    Error 1001, &quot;Unexpected platform - &quot; &amp; platform<br />End Select<br /> <br />Print OSUtils.getEnvironment(envVar)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.GetFilesInDir-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.GetFilesInDir"><!--   --></a>		<h4>GetFilesInDir</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="GetFilesInDir method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function GetFilesInDir<em>(DirPath As String, FileSpec As String)</em> As String Array</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.GetFilesInDir.comments"><!--   --></a>Used for standard files only, simple functionality. Dir can loop through files using additional calls to Dir(), <br />but won&apos;t work if you make a call within the loop to Dir() with a different path - i.e. to check a file exists.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.GetFilesInDir.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>DirPath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to directory, e.g. /temp/foo&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>FileSpec</strong></td><td class="colOne">String</td><td class="colOne attributes">CONST,<br />OPTIONAL,<br />OptionalValue: LIT_STR("")</td><td class="colLast comment"><em>Mask to match filenames. Asterisk (*) for either the filename or extension designates all files with any character in that position. Question mark (?) designates a single character in that position.&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.GetFilesInDir.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code gets arrays of files in two different directories, for navigating both at the same time.<br />%END REM<br />Dim OSUtils as New OSUtils()<br />Dim mainFiles as Variant<br />Dim childFiles as Variant<br />mainFiles = OSUtils.getFilesInDir(CurDir &amp; &quot;/foo&quot;)<br />childFiles = OSUtils.getFilesInDir(CurDir &amp; &quot;/foo/bar&quot;)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.GetFileSize-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.GetFileSize"><!--   --></a>		<h4>GetFileSize</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="GetFileSize method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function GetFileSize<em>(Path As String)</em> As Double</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.GetFileSize.comments"><!--   --></a>Returns the size of the file, if it exists. Error if it does not exist. </td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.GetFileSize.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to file&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.GetFileSize.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code gets the size of a file.<br />%END REM<br />Dim OSUtils as New OSUtils()<br />Return OSUtils.getFileSize(CurDir &amp; &quot;/foo/bar.txt&quot;)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.IsDirectory-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.IsDirectory"><!--   --></a>		<h4>IsDirectory</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="IsDirectory method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function IsDirectory<em>(Path As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.IsDirectory.comments"><!--   --></a>Checks whether a directory at the path expected</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.IsDirectory.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path for directory expected, e.g. /temp/foo&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.IsDirectory.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code checks if a filepath location is a directory.<br />%END REM<br />Dim OSUtils as New OSUtils<br />Print OSUtils.isDirectory(filePath)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.IsFile-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.IsFile"><!--   --></a>		<h4>IsFile</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="IsFile method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function IsFile<em>(Path As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.IsFile.comments"><!--   --></a>Checks whether a file exists at the path</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.IsFile.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to file, e.g. /temp/foo/foo.bss&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.IsFile.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code checks if a filepath location is a file.<br />%END REM<br />Dim OSUtils as New OSUtils<br />PrintOSUtils.isFile(filePath)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.IsWritable-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.IsWritable"><!--   --></a>		<h4>IsWritable</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="IsWritable method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function IsWritable<em>(Path As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.IsWritable.comments"><!--   --></a>Checks whether current user has write permissons to a directory or file</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.IsWritable.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path for directory or file expected, e.g. /temp/foo&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.IsWritable.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code checks if a file location is writable.<br />%END REM<br />Dim OSUtils as New OSUtils<br />Print OSUtils.isWritable(filePath)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.MakeDirectories-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.MakeDirectories"><!--   --></a>		<h4>MakeDirectories</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="MakeDirectories method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function MakeDirectories<em>(Path As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.MakeDirectories.comments"><!--   --></a>Conditionally attempts to create a directory in the filesystem.<br />	<br />Checks for the existence of a directory, and if it does not exist attempts to create it.    Multiple level directories are supported. <br />	<br />@return Flag indicating success / failure. True indicates either the directory already exists or was successfully created.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.MakeDirectories.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to create directory, e.g. /temp/foo/bar.   &nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.MakeDirectories.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following cde creates directories<br />%END REM <br />  Dim myOS as New OSUtils()<br />  Dim myresult as Boolean<br />&apos; assuming directory /temp exists and contains a single subfolder &quot;test1&quot; <br />  myresult = myOS.makeDirectories(&quot;/temp/test1&quot;)  <br />  &apos; myresult is true because  &quot;test1&quot; already exists within &quot;temp&quot;<br />  myresult = myOS.makeDirectories(&quot;/temp/foo/bar&quot;) <br />  &apos; myresult is true if folder &quot;foo&quot; was successfully created within &quot;temp&quot;, AND folder &quot;bar&quot; was successfully created witihin &quot;foo&quot;.  <br />  myresult = myOS.makeDirectories(&quot;/temp/jabberwocky&quot;) <br />  &apos; if a failure occurred (such as the user not having the right to create filesystem directories) then myresult would be false. <br /> </pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.New-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.New"><!--   --></a>		<h4>New</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="New method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function New<em>()</em> As OSUtils</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.New.comments"><!--   --></a>Constructor</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.RegisterVSEPath-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.RegisterVSEPath"><!--   --></a>		<h4>RegisterVSEPath</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="RegisterVSEPath method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function RegisterVSEPath<em>()</em> As Boolean</pre></th></tr>			</thead>			<tbody>					</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.RemoveDir-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.RemoveDir"><!--   --></a>		<h4>RemoveDir</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="RemoveDir method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function RemoveDir<em>(Path As String, Force As Boolean)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.RemoveDir.comments"><!--   --></a>Removes a directory and potentially all files within it.   </td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.RemoveDir.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Path</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to directory&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Force</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">OPTIONAL,<br />BY_VAL,<br />OptionalValue: LSXFalse</td><td class="colLast comment"><em>Flag indicating whether to remove all files / subfolders in the directory first.  Defaults to FALSE if not included. &nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.RemoveDir.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code removes directories<br />%END REM<br />Dim OSUtils as New OSUtils()<br />Dim TestDir as String<br />TestDir = CurDir &amp; &quot;/test/output/test1&quot;<br />Print OSUtils.RemoveDir(TestDir)</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="OSUtilsVSE.OSUtils.SetEnvironment-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="OSUtilsVSE.OSUtils.SetEnvironment"><!--   --></a>		<h4>SetEnvironment</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="SetEnvironment method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function SetEnvironment<em>(EnvVar As String, Value As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="OSUtilsVSE.OSUtils.SetEnvironment.comments"><!--   --></a>Sets an environment variable, returning success / failure. OSUtils uses a snapshot of environment variables that is separate to the snapshot used by the core runtime. <br />So if you set an environment variable using OSUtils, you must use OSUtils to retrieve the updated value.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="OSUtilsVSE.OSUtils.SetEnvironment.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>EnvVar</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Environment variable to set&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Value</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Value to set for environment variable&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="OSUtilsVSE.OSUtils.SetEnvironment.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code sets an environment variable for the duration of the current code run.<br />%END REM<br />Dim OSUtils as New OSUtils()<br />Call OSUtils.setEnvironment(&quot;VOLTSCRIPT_HELLO&quot;, &quot;Hello World&quot;)</pre></td></tr>		</tbody>		</table>			</li></ul>	</li></ul>
+			</li>
+		</ul>
+	</div> 
+
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+	<a name="navbar.bottom"><!--   --></a>
+	<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+	
+	<a name="navbar.bottom.firstrow"><!--   --></a>
+	<ul class="navList" title="Navigation">
+		<!--  -->
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+		<!-- 
+		<li><a href="prevelement (class or package)url.html" title="previous element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Previous element (class or package) Name</span></a></li>
+		{{link_prevelement}}
+		-->
+
+		<!-- 
+		<li><a href="nextelement (class or package)url.html" title="next element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Next element (class or package) Name</span></a></li>
+		{{link_nextelement}}
+		-->
+	</ul>
+	<ul class="navList">
+	<!-- 
+		<li><a href="../../../../index.html?url for frames" target="_top">Frames</a></li>
+		<li><a href="{{elementurl}}" target="_top">No&nbsp;Frames</a></li>
+	-->
+	</ul>
+	<ul class="navList" id="navcontent_navbar_bottom">
+	<!-- 
+		<li><a href="../../../nav-content-noframe.html">All&nbsp;Classes</a></li>
+	 -->
+	</ul>
+	
+	<div>
+		<script type="text/javascript"><!--
+		  navcontentLink = document.getElementById("navcontent_navbar_bottom");
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		  //-->
+		</script>
+	</div>
+	
+	<div>
+		<ul class="subNavList">
+		<!-- 
+			<li>Summary:&nbsp;</li>
+			<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.summary">Method</a></li>
+		 -->
+		</ul>
+		<ul class="subNavList">
+		<!-- 
+			<li>Detail:&nbsp;</li>
+			<li>Field&nbsp;|&nbsp;</li>
+			<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.detail">Method</a></li>
+		 -->
+		</ul>
+	</div>
+	
+	<a name="skip.navbar.bottom"><!--   --></a>
+</div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; <a href="https://www.hcltechsw.com/">HCL America, Inc.</a> 1999, 2023. All Rights Reserved.</small></p>
+</body>
+</html>

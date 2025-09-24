@@ -1,0 +1,92 @@
+pre {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+:root pre {
+  --md-code-hl-operator-color: var(--md-code-fg-color);
+  --md-code-hl-punctuation-color: var(--md-code-fg-color);
+}
+
+.highlight .md-clipboard,
+.hljs .md-clipboard {
+  color: #dcdcdc80;
+}
+
+tr.lostLinkItem:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+header {
+  background-color: #4051b5;
+}
+
+footer {
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: 'HCLTech Roobert';
+  src: url(../font/HCLTechRoobert-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../font/spacemono-regular-webfont.woff2);
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: normal;
+  src: url(../font/spacemono-italic-webfont.woff2);
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: bold;
+  src: url(../font/spacemono-bold-webfont.woff2);
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: bold;
+  src: url(../font/spacemono-bolditalic-webfont.woff2);
+}
+
+:root {
+  --md-text-font: "HCLTech Roobert"; 
+  --md-code-font: "Space Mono", "Courier", monospace;
+}
+
+.md-typeset h1{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h2{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h3{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h4{
+  font-family:"HCLTech Roobert";
+}
+
+.md-typeset h5{
+  font-family:"HCLTech Roobert";
+  text-transform: capitalize;
+  font-size: 0.9em;
+  color: #5b666d;
+}
+
+.md-typeset h6{
+  font-family:"HCLTech Roobert";
+}

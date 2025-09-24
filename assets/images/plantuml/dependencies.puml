@@ -1,0 +1,58 @@
+@startuml
+left to right direction
+skinparam package {
+  BorderColor Maroon
+  BorderThickness 2
+}
+object archipelago #CornflowerBlue {
+    setup
+    installDeps
+    foundryPack
+}
+package voltscript-collections {
+    object "VoltScriptCollections.vss" as VoltScriptCollections #Coral
+}
+package voltscript-json-converter {
+    object "VoltScriptJsonConverter.vss" as VoltScriptJsonConverter #Gold
+}
+package voltscript-testing {
+    object "VoltScriptTesting.vss" as VoltScriptTesting #DarkGray
+}
+package voltscript-console-colors {
+    object "VoltScriptConsoleColors.vss" as VoltScriptConsoleColors #BurlyWood
+}
+package voltscript-voltmx-middleware {
+    object "VoltMXObjects.vss" as VoltMXObjects #MediumOrchid
+}
+package voltscript-logging {
+    object "VoltScriptLogging.vss" as VoltScriptLogging #MediumSeaGreen
+}
+object JsonVSE #LightGreen
+object StreamVSE #LightGreen
+object ZipVSE #LightGreen
+object OSUtilsVSE #LightGreen
+object WebVSE #LightGreen
+object ZuluVSE #LightGreen
+object HashVSE #LightGreen
+object DrapiVSE #LightGreen
+object CouchVSE #LightGreen
+object XMLVSE #LightGreen
+object ContextVSE #LightGreen
+VoltScriptCollections <|.. archipelago #CornflowerBlue
+VoltScriptJsonConverter <|.. archipelago #CornflowerBlue
+VoltScriptTesting <|.. archipelago #CornflowerBlue
+VoltScriptConsoleColors <|.. archipelago #CornflowerBlue
+ContextVSE <|.. archipelago #CornflowerBlue
+OSUtilsVSE <|.. archipelago #CornflowerBlue
+StreamVSE <|.. archipelago #CornflowerBlue
+WebVSE <|.. archipelago #CornflowerBlue
+ZipVSE <|.. archipelago #CornflowerBlue
+JsonVSE <|-- VoltScriptCollections #Coral
+JsonVSE <|-- VoltScriptJsonConverter #GoldenRod
+VoltScriptCollections <|-- VoltMXObjects #DarkOrchid
+JsonVSE <|-- VoltMXObjects #DarkOrchid
+ContextVSE <|-- VoltMXObjects #DarkOrchid
+VoltScriptLogging <|-- VoltScriptJsonConverter #GoldenRod
+VoltScriptLogging <|-- VoltScriptCollections #Coral
+VoltScriptLogging <|-- VoltMXObjects #DarkOrchid
+@enduml

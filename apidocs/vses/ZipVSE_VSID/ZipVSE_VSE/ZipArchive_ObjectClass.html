@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!-- {{vsidgenerated}} -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Class: ZipArchive</title>
+	<meta name="date" content="2025-04-24">
+	<meta name="keywords" content="Warning()"><meta name="keywords" content="AddFile()"><meta name="keywords" content="AddFileList()"><meta name="keywords" content="AddFiles()"><meta name="keywords" content="CreateArchive()"><meta name="keywords" content="ExtractAllFiles()"><meta name="keywords" content="FindFile()"><meta name="keywords" content="New()"><meta name="keywords" content="OpenArchive()"><meta name="keywords" content="RegisterVSEPath()"><meta name="keywords" content="ArchivePath()"><meta name="keywords" content="ArchiveSize()"><meta name="keywords" content="EntryCount()"><meta name="keywords" content="GlobalComment()"><meta name="keywords" content="VSEVersion()"><meta name="keywords" content="ZipVersion()"><meta name="keywords" content="CloseArchive()"><meta name="keywords" content="ZipVSE.ZipArchive Class">
+	<link rel="stylesheet" type="text/css" href="..\..\resources/vsid.css" title="balistyle">
+	<script type="text/javascript" src="..\..\resources/vsid.js"></script>
+</head>
+<body>
+<script type="text/javascript"></script>
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+
+
+<header id="masterHeader" class="dark master-header dark-master">
+	<div id="header-topbar" class="header-topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl" rel="nofollow"><img src="..\..\resources/hcl-white.png" class="img-responsive"></a>
+				</div>
+				<div class="col-xs-6 text-right">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl-tech" rel="nofollow">HCL Software</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav">
+	<a name="navbar.top">
+	<!--   -->
+	</a>
+	<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+	<a name="navbar.top.firstrow">
+	<!--   -->
+	</a>	
+	<ul class="navList" title="Navigation">
+		<!-- -->
+		<li><a href="..\ZipVSE_VSID.html" title="Navigate to ZipVSE">ZipVSE</a></li><li><a href="..\ZipVSE_VSE.html" title="Navigate to ZipVSE.ZipVSE">ZipVSE</a></li> 
+		<li class="navBarCell1Rev">ZipArchive</li>
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+	<!-- --> 
+	</ul>
+	<div><!--  -->
+		<script type="text/javascript"><!--
+		navcontentLink = document.getElementById("navcontent_navbar_top");
+		if (!!navcontentLink) {
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		}
+		  //-->
+		</script>
+	</div>
+	<div>
+		<ul class="subNavList">
+			
+		</ul>
+	</div>
+	<a name="skip.navbar.top">
+	<!--   -->
+	</a>
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<!-- Class -->
+
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+	<h1 title="Class ZipArchive" class="title">Public Class ZipArchive</h1>
+</div>
+
+<div class="contentContainer">
+	<ul class="inheritance">
+		<!-- --> 
+
+		<ul class="inheritance">
+		<!-- --> 
+
+			<ul class="inheritance">
+				<li><h2>ZipVSE.ZipArchive</h2></li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr />
+
+	<div class="description">	<ul class="blockList">		<li class="blockList">			<div class="comments"><!-- comment --><pre>ZipArchive is a collection class: iterate using &quot;forall&quot;, or use a file name as an index. E.g., set ZipFileInstance = Archive(&quot;filename&quot;). Using filename as index throws error 404 if there is no matching file is in the zip archive.</pre></div>			<hr />		</li>	</ul></div>
+	<ul class="blockList">	<li class="blockList">		<a name="class.summary"><!--   --></a>		<h3>Class Summary</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary Table">			<thead>						</thead>			<tbody>			<tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Project ID</span></td><td class="colLast">48258A08005C548085258916003F8EF3</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Version</span></td><td class="colLast">3</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class ID</span></td><td class="colLast">48258A08005C548085258916003F9B5E</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">VSE Class ID</span></td><td class="colLast">2</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class Type</span></td><td class="colLast">Base</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Attributes</span></td><td class="colLast"><table style="margin:-12px 0 0 -10px;"><tr><td class="colFirst" rowspan="2">Collection</td><td class="colOne"><span class="memberNameLabel">Collected Items Type</span></td><td class="colLast">ZipFile</td></tr><tr><td class="colFirst"><span class="memberNameLabel">Collection Index</span></td><td class="colLast">String</td></tr></table></td></tr>			</tbody>		</table>	</li></ul>
+	
+	<div class="summary">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				 
+				
+				<ul class="blockList">	<li class="blockList">		<a name="properties.summary"><!--   --></a>		<h3>Property Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Property Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.ArchivePath-">ArchivePath</a> (Get)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.ArchiveSize-">ArchiveSize</a> (Get)</span> As Long</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.EntryCount-">EntryCount</a> (Get)</span> As Long</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.GlobalComment-">GlobalComment</a> (Get)</span> As String</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.VSEVersion-">VSEVersion</a> (Get)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Get.ZipVersion-">ZipVersion</a> (Get)</span> As String</code></td></tr>			</tbody>		</table>	</li></ul>  
+				
+				<ul class="blockList">	<li class="blockList">		<a name="methods.summary"><!--   --></a>		<h3>Method Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.Warning-">Warning</a></span>(Code As Integer, Message As String)</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.AddFile-">AddFile</a></span>(FilePath As String, Comment As String, UseFullPath As Boolean) As ZipFile</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.AddFileList-">AddFileList</a></span>(DirectoryPath As String, FileNames As String Array, UseFullPath As Boolean) As ZipFile Array</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.AddFiles-">AddFiles</a></span>(DirectoryPath As String, WildcardSpec As String, UseFullPath As Boolean) As ZipFile Array</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.CreateArchive-">CreateArchive</a></span>(FilePath As String, Comment As String, Overwrite As Boolean) As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.ExtractAllFiles-">ExtractAllFiles</a></span>(DestinationDirectory As String, CreateDirectory As Boolean, OverwriteFiles As Boolean) As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.FindFile-">FindFile</a></span>(FileName As String) As ZipFile</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.New-">New</a></span>() As ZipArchive</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.OpenArchive-">OpenArchive</a></span>(FilePath As String) As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.RegisterVSEPath-">RegisterVSEPath</a></span>() As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#ZipVSE.ZipArchive.CloseArchive-">CloseArchive</a></span>() As Boolean</code></td></tr>			</tbody>		</table>	</li></ul> 
+			</li>
+		</ul>
+	</div>
+
+	<div class="details">
+		<ul class="blockList">
+			<li class="blockList">
+				<!-- ========= CODE SAMPLE ======== --><ul class="blockList">	<li class="blockList">		<a name="{{fqn}}.codesample"><!-- --></a>		<h3>Code Sample</h3>		<ul class="blockListLast">			<li class="blockList">				<pre class="codesample">%REM<br />    The following code gets a file by name<br />%END REM<br />Dim zip as New ZipArchive()<br />Dim zipFile as ZipFile<br />Call zip.openArchive(CurDir &amp; &quot;/zip1.zip&quot;)<br />Set zipFile = zip(&quot;temp1.txt&quot;)    &apos; This will error if zip archive does not include a file temp1<br />Call zip.closeArchive()<br />%REM<br />    The following code extracts top-level files only<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.openArchive(CurDir &amp; &quot;/zip1.zip&quot;)<br />ForAll zipFile in zip<br />   If Not zipFile.isDirectory Then zipFile.extractFile(CurDir, False, True)<br />End ForAll<br />Call zip.closeArchive()</pre>			</li>		</ul>	</li></ul>
+				
+				<!-- ============ PROPERTY DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="property.detail"><!--   --></a>		<h3>Properties Detail</h3>		<!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.ArchivePath-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.ArchivePath"><!--   --></a>		<h4>ArchivePath (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ArchivePath method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get ArchivePath<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.Get.ArchivePath.comments"><!--   --></a>Path where the archive can be found.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.ArchiveSize-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.ArchiveSize"><!--   --></a>		<h4>ArchiveSize (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ArchiveSize method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get ArchiveSize<em></em> As Long</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.Get.ArchiveSize.comments"><!--   --></a>Size of the zip archive.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.EntryCount-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.EntryCount"><!--   --></a>		<h4>EntryCount (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="EntryCount method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get EntryCount<em></em> As Long</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.Get.EntryCount.comments"><!--   --></a>Number of top-level entries in the zip archive. These could be files or directories.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.GlobalComment-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.GlobalComment"><!--   --></a>		<h4>GlobalComment (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="GlobalComment method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get GlobalComment<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.Get.GlobalComment.comments"><!--   --></a>A comment assigned to the zip archive.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.VSEVersion-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.VSEVersion"><!--   --></a>		<h4>VSEVersion (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="VSEVersion method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get VSEVersion<em></em> As String</pre></th></tr>			</thead>			<tbody>					</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Get.ZipVersion-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Get.ZipVersion"><!--   --></a>		<h4>ZipVersion (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ZipVersion method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get ZipVersion<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.Get.ZipVersion.comments"><!--   --></a>The version of the C/C++ zip library in use.</td></tr>				</tbody>		</table>			</li></ul>	</li></ul>
+				<!-- ============ METHOD DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="method.detail"><!--   --></a>		<h3>Methods Detail</h3>		<!-- Method Detail Element --><a name="ZipVSE.ZipArchive.Warning-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.Warning"><!--   --></a>		<h4>Warning</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="Warning method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Event Warning<em>(Code As Integer, Message As String)</em></pre></th></tr>			</thead>			<tbody>		<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.Warning.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>Code</strong></td><td class="colOne">Integer</td><td class="colOne attributes">BY_VAL</td><td class="colLast comment"><em>&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Message</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>&nbsp;</em></td></tr>			</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.AddFile-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.AddFile"><!--   --></a>		<h4>AddFile</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="AddFile method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function AddFile<em>(FilePath As String, Comment As String, UseFullPath As Boolean)</em> As ZipFile</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.AddFile.comments"><!--   --></a>Add a file to the zip archive.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.AddFile.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>FilePath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path to the file to add&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Comment</strong></td><td class="colOne">String</td><td class="colOne attributes">CONST,<br />OPTIONAL,<br />OptionalValue: LIT_STR("")</td><td class="colLast comment"><em>Comment to assign to the file in the zip&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>UseFullPath</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">OPTIONAL,<br />BY_VAL,<br />OptionalValue: LSXTrue</td><td class="colLast comment"><em>Whether to add the file with the full path with which the file was retrieved&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.AddFile.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code creates a zip with three files:<br />test1.txt<br />samples/test1.txt<br />test2.txt (because of the last parameter, telling it to create the file without using the full path from the first parameter)<br />%END REM<br />Dim zipArchive as New ZipArchive<br />Call zip.createArchive(&quot;zip1.zip&quot;, &quot;&quot;, True)<br />Call zip.addFile(&quot;test1.txt&quot;)<br />Call zip.addFile(&quot;samples/test1.txt&quot;)<br />Call zip.addFile(&quot;samples/test2.txt&quot;, &quot;&quot;, False)<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.AddFileList-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.AddFileList"><!--   --></a>		<h4>AddFileList</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="AddFileList method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function AddFileList<em>(DirectoryPath As String, FileNames As String Array, UseFullPath As Boolean)</em> As ZipFile Array</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.AddFileList.comments"><!--   --></a>Add an array of files to the zip, optionally using the full path.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.AddFileList.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>DirectoryPath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Directory containing the files in the FileNames argument&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>FileNames</strong></td><td class="colOne">String</td><td class="colOne attributes">Array</td><td class="colLast comment"><em>Array of files to add&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>UseFullPath</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">OPTIONAL,<br />BY_VAL,<br />OptionalValue: LSXTrue</td><td class="colLast comment"><em>Whether to add the file with the full path with which the file was retrieved&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.AddFileList.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code adds test1.txt and test2.txt to the zip archive<br />%END REM<br />Dim zip as New ZipArchive()<br />Dim files(1) as String<br />files(0) = &quot;test1.txt&quot;<br />files(1) = &quot;test2.txt&quot;<br />Call zip.createArchive(&quot;zip1.zip&quot;, &quot;&quot;, True)<br />Call zip.addFileList(CurDir, files)<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.AddFiles-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.AddFiles"><!--   --></a>		<h4>AddFiles</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="AddFiles method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function AddFiles<em>(DirectoryPath As String, WildcardSpec As String, UseFullPath As Boolean)</em> As ZipFile Array</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.AddFiles.comments"><!--   --></a>Adds all files that match a particular wildcard specification in a specific directory.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.AddFiles.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>DirectoryPath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Directory from which to add files&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>WildcardSpec</strong></td><td class="colOne">String</td><td class="colOne attributes">CONST,<br />OPTIONAL,<br />OptionalValue: LIT_STR("*")</td><td class="colLast comment"><em>Specification for which files to add, e.g. &quot;*.pdf&quot;&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>UseFullPath</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">OPTIONAL,<br />BY_VAL,<br />OptionalValue: LSXTrue</td><td class="colLast comment"><em>Whether to add the file with the full path with which the file was retrieved&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.AddFiles.codesample"><!--   --></a><pre class="codesample">%REM<br />    Gets all .txt files and adds them to a zip<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.createArchive(&quot;zip1.zip&quot;, &quot;&quot;, True)<br />Call zip.addFiles(CurDir, &quot;*.txt&quot;)<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.CreateArchive-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.CreateArchive"><!--   --></a>		<h4>CreateArchive</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="CreateArchive method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function CreateArchive<em>(FilePath As String, Comment As String, Overwrite As Boolean)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.CreateArchive.comments"><!--   --></a>Creates a new zip archive ready for files to be addde. If you are just wanting to extract files from an existing zip, use openArchive() instead</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.CreateArchive.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>FilePath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Path at which to create the archive&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Comment</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Global comment to apply to the zip archive&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>Overwrite</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">BY_VAL</td><td class="colLast comment"><em>Whether to overwrite a zip if one already exists at the requestd filepath&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.CreateArchive.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code creates a zip archive and adds all .txt files from the current directory to it<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.createArchive(&quot;zip1.zip&quot;, &quot;&quot;, True)<br />Call zip.addFiles(CurDir, &quot;*.txt&quot;)<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.ExtractAllFiles-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.ExtractAllFiles"><!--   --></a>		<h4>ExtractAllFiles</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ExtractAllFiles method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function ExtractAllFiles<em>(DestinationDirectory As String, CreateDirectory As Boolean, OverwriteFiles As Boolean)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.ExtractAllFiles.comments"><!--   --></a>Extracts all files from a zip to a specific directory</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.ExtractAllFiles.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>DestinationDirectory</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Directory into which to extract the files&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>CreateDirectory</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">BY_VAL</td><td class="colLast comment"><em>Whether to create the directory&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">3</strong></td><td class="colOne"><strong>OverwriteFiles</strong></td><td class="colOne">Boolean</td><td class="colOne attributes">BY_VAL</td><td class="colLast comment"><em>Whether to overwrite a file if one already exists with the same name&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.ExtractAllFiles.codesample"><!--   --></a><pre class="codesample">%REM<br />   The following code extracts all files from a zip in a single API call<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.openArchive(&quot;zip1.zip&quot;)<br />Call zip.extractAllFiles(CurDir, False, True)<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.FindFile-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.FindFile"><!--   --></a>		<h4>FindFile</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="FindFile method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function FindFile<em>(FileName As String)</em> As ZipFile</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.FindFile.comments"><!--   --></a>Finds a file within a zip archive. Triggers error 404 if file not found.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.FindFile.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>FileName</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Filename to look for&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.FindFile.codesample"><!--   --></a><pre class="codesample">%REM<br />    Gets a file from the archive, with error handling if the file doesn&apos;t exist<br />%END REM<br />Dim zip as New ZipArchive()<br />Dim zf as ZipFile<br />Call zip.openArchive(CurDir &amp; &quot;/zip1.zip&quot;)<br />Try<br />    Set zf = zip.findFile(&quot;testFail.txt&quot;)<br />Catch<br />    Print &quot;Error: &quot; &amp; Err &amp; &quot;, Line: &quot; &amp; Erl<br />End Try<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.New-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.New"><!--   --></a>		<h4>New</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="New method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function New<em>()</em> As ZipArchive</pre></th></tr>			</thead>			<tbody>					</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.OpenArchive-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.OpenArchive"><!--   --></a>		<h4>OpenArchive</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="OpenArchive method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function OpenArchive<em>(FilePath As String)</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.OpenArchive.comments"><!--   --></a>Opens an existing zip archive at a specified filepath.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="ZipVSE.ZipArchive.OpenArchive.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>FilePath</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Filepath for the zip archive&nbsp;</em></td></tr>	<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.OpenArchive.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code extracts all top-level files from a zip archive<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.openArchive(CurDir &amp; &quot;/zip1.zip&quot;)<br />ForAll zipFile in zip<br />   If Not zipFile.isDirectory Then <br />      zipFile.extractFile(CurDir, False, True)<br />   End If<br />End ForAll<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.RegisterVSEPath-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.RegisterVSEPath"><!--   --></a>		<h4>RegisterVSEPath</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="RegisterVSEPath method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function RegisterVSEPath<em>()</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.RegisterVSEPath.comments"><!--   --></a>Internal method used to register the VSE with the runtime registry.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="ZipVSE.ZipArchive.CloseArchive-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="ZipVSE.ZipArchive.CloseArchive"><!--   --></a>		<h4>CloseArchive</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="CloseArchive method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Sub CloseArchive<em>()</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="ZipVSE.ZipArchive.CloseArchive.comments"><!--   --></a>Close the handle to the zip archive.</td></tr>		<tr><td>&nbsp;</td></tr><tr><th class="colFirst" scope="col" colspan="5">Code Sample</th></tr><tr class="altColor"><td class="colFirst" colspan="5" style="padding-top:0;"><a name="ZipVSE.ZipArchive.CloseArchive.codesample"><!--   --></a><pre class="codesample">%REM<br />    The following code extracts all top-level files from a zip archive<br />%END REM<br />Dim zip as New ZipArchive()<br />Call zip.openArchive(CurDir &amp; &quot;/zip1.zip&quot;)<br />ForAll zipFile in zip<br />   If Not zipFile.isDirectory Then zipFile.extractFile(CurDir, False, True)<br />End ForAll<br />Call zip.closeArchive()</pre></td></tr>		</tbody>		</table>			</li></ul>	</li></ul>
+			</li>
+		</ul>
+	</div> 
+
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+	<a name="navbar.bottom"><!--   --></a>
+	<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+	
+	<a name="navbar.bottom.firstrow"><!--   --></a>
+	<ul class="navList" title="Navigation">
+		<!--  -->
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+		<!-- 
+		<li><a href="prevelement (class or package)url.html" title="previous element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Previous element (class or package) Name</span></a></li>
+		{{link_prevelement}}
+		-->
+
+		<!-- 
+		<li><a href="nextelement (class or package)url.html" title="next element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Next element (class or package) Name</span></a></li>
+		{{link_nextelement}}
+		-->
+	</ul>
+	<ul class="navList">
+	<!-- 
+		<li><a href="../../../../index.html?url for frames" target="_top">Frames</a></li>
+		<li><a href="{{elementurl}}" target="_top">No&nbsp;Frames</a></li>
+	-->
+	</ul>
+	<ul class="navList" id="navcontent_navbar_bottom">
+	<!-- 
+		<li><a href="../../../nav-content-noframe.html">All&nbsp;Classes</a></li>
+	 -->
+	</ul>
+	
+	<div>
+		<script type="text/javascript"><!--
+		  navcontentLink = document.getElementById("navcontent_navbar_bottom");
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		  //-->
+		</script>
+	</div>
+	
+	<div>
+		<ul class="subNavList">
+		<!-- 
+			<li>Summary:&nbsp;</li>
+			<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.summary">Method</a></li>
+		 -->
+		</ul>
+		<ul class="subNavList">
+		<!-- 
+			<li>Detail:&nbsp;</li>
+			<li>Field&nbsp;|&nbsp;</li>
+			<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.detail">Method</a></li>
+		 -->
+		</ul>
+	</div>
+	
+	<a name="skip.navbar.bottom"><!--   --></a>
+</div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; <a href="https://www.hcltechsw.com/">HCL America, Inc.</a> 1999, 2023. All Rights Reserved.</small></p>
+</body>
+</html>

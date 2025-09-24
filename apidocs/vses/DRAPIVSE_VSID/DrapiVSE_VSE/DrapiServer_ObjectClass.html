@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<!-- {{vsidgenerated}} -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Class: DrapiServer</title>
+	<meta name="date" content="2025-09-16">
+	<meta name="keywords" content="CreateRequest()"><meta name="keywords" content="Login()"><meta name="keywords" content="Logout()"><meta name="keywords" content="New()"><meta name="keywords" content="RegisterVSEPath()"><meta name="keywords" content="Connected()"><meta name="keywords" content="JWTToken()"><meta name="keywords" content="LibCurlVersion()"><meta name="keywords" content="ServerURL()"><meta name="keywords" content="SSLHostValidation()"><meta name="keywords" content="VerboseLogging()"><meta name="keywords" content="VSEVersion()"><meta name="keywords" content="JWTToken()"><meta name="keywords" content="ServerURL()"><meta name="keywords" content="SSLHostValidation()"><meta name="keywords" content="VerboseLogging()"><meta name="keywords" content="DrapiVSE.DrapiServer Class">
+	<link rel="stylesheet" type="text/css" href="..\..\resources/vsid.css" title="balistyle">
+	<script type="text/javascript" src="..\..\resources/vsid.js"></script>
+</head>
+<body>
+<script type="text/javascript"></script>
+<noscript><div>JavaScript is disabled on your browser.</div></noscript>
+
+
+<header id="masterHeader" class="dark master-header dark-master">
+	<div id="header-topbar" class="header-topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl" rel="nofollow"><img src="..\..\resources/hcl-white.png" class="img-responsive"></a>
+				</div>
+				<div class="col-xs-6 text-right">
+					<a href="https://www.hcltechsw.com/" target="_blank" class="logo-hcl-tech" rel="nofollow">HCL Software</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav">
+	<a name="navbar.top">
+	<!--   -->
+	</a>
+	<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+	<a name="navbar.top.firstrow">
+	<!--   -->
+	</a>	
+	<ul class="navList" title="Navigation">
+		<!-- -->
+		<li><a href="..\DRAPIVSE_VSID.html" title="Navigate to DRAPIVSE">DRAPI VSE</a></li><li><a href="..\DrapiVSE_VSE.html" title="Navigate to DRAPIVSE.DrapiVSE">DrapiVSE</a></li> 
+		<li class="navBarCell1Rev">DrapiServer</li>
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+	<!-- --> 
+	</ul>
+	<div><!--  -->
+		<script type="text/javascript"><!--
+		navcontentLink = document.getElementById("navcontent_navbar_top");
+		if (!!navcontentLink) {
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		}
+		  //-->
+		</script>
+	</div>
+	<div>
+		<ul class="subNavList">
+			
+		</ul>
+	</div>
+	<a name="skip.navbar.top">
+	<!--   -->
+	</a>
+</div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<!-- Class -->
+
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+	<h1 title="Class DrapiServer" class="title">Public Class DrapiServer</h1>
+</div>
+
+<div class="contentContainer">
+	<ul class="inheritance">
+		<!-- --> 
+
+		<ul class="inheritance">
+		<!-- --> 
+
+			<ul class="inheritance">
+				<li><h2>DrapiVSE.DrapiServer</h2></li>
+			</ul>
+		</ul>
+	</ul>
+
+	<hr />
+
+	<div class="description">	<ul class="blockList">		<li class="blockList">			<div class="comments"><!-- comment --><pre>Class for configuring sessions with a DRAPI server.</pre></div>			<hr />		</li>	</ul></div>
+	<ul class="blockList">	<li class="blockList">		<a name="class.summary"><!--   --></a>		<h3>Class Summary</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary Table">			<thead>						</thead>			<tbody>			<tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Project ID</span></td><td class="colLast">1CE507407C8F5ECC85258C7E00690863</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Version</span></td><td class="colLast">3</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class ID</span></td><td class="colLast">CFD3C80453F7DAA785258C7E00691BBD</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">VSE Class ID</span></td><td class="colLast">1</td></tr><tr class="altColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Class Type</span></td><td class="colLast">Base</td></tr><tr class="rowColor"><td class="colFirst"><span class="memberNameLabel" title="{{fqn}}">Attributes</span></td><td class="colLast"></td></tr>			</tbody>		</table>	</li></ul>
+	
+	<div class="summary">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				 
+				
+				<ul class="blockList">	<li class="blockList">		<a name="properties.summary"><!--   --></a>		<h3>Property Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Property Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.Connected-">Connected</a> (Get)</span> As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.JWTToken-">JWTToken</a> (Get)</span> As String</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.LibCurlVersion-">LibCurlVersion</a> (Get)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.ServerURL-">ServerURL</a> (Get)</span> As String</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.SSLHostValidation-">SSLHostValidation</a> (Get)</span> As Boolean</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.VerboseLogging-">VerboseLogging</a> (Get)</span> As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Get.VSEVersion-">VSEVersion</a> (Get)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Set.JWTToken-">JWTToken</a> (Set)</span> As String</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Set.ServerURL-">ServerURL</a> (Set)</span> As String</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Set.SSLHostValidation-">SSLHostValidation</a> (Set)</span> As Boolean</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Set.VerboseLogging-">VerboseLogging</a> (Set)</span> As Boolean</code></td></tr>			</tbody>		</table>	</li></ul>  
+				
+				<ul class="blockList">	<li class="blockList">		<a name="methods.summary"><!--   --></a>		<h3>Method Summaries</h3>		<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods and comments">			<thead>						</thead>			<tbody>			<tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.CreateRequest-">CreateRequest</a></span>(ScopeName As String) As DrapiRequest</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Login-">Login</a></span>(User As String, Password As String) As DrapiResponse</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.Logout-">Logout</a></span>() As DrapiResponse</code></td></tr><tr class="altColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.New-">New</a></span>() As DrapiServer</code></td></tr><tr class="rowColor"><td class="colFirst"><code><span class="memberNameLink"><a href="#DrapiVSE.DrapiServer.RegisterVSEPath-">RegisterVSEPath</a></span>() As Boolean</code></td></tr>			</tbody>		</table>	</li></ul> 
+			</li>
+		</ul>
+	</div>
+
+	<div class="details">
+		<ul class="blockList">
+			<li class="blockList">
+				
+				
+				<!-- ============ PROPERTY DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="property.detail"><!--   --></a>		<h3>Properties Detail</h3>		<!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.Connected-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.Connected"><!--   --></a>		<h4>Connected (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="Connected method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get Connected<em></em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.Connected.comments"><!--   --></a>Set to True if this DrapiServer&apos;s Login method was successfully called.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.JWTToken-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.JWTToken"><!--   --></a>		<h4>JWTToken (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="JWTToken method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get JWTToken<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.JWTToken.comments"><!--   --></a>The JWT token string (encrypted and Base-64 encoded) used to log in to the DRAPI server. The property will be set automatically if a token is provided in the script invocation, or when the script sucessfully executes a Login call. This propery will need to be set for most methods of DrapiRequest associated with this server object.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.LibCurlVersion-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.LibCurlVersion"><!--   --></a>		<h4>LibCurlVersion (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="LibCurlVersion method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get LibCurlVersion<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.LibCurlVersion.comments"><!--   --></a>Version of libcurl used by this VSE for HTTP requests.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.ServerURL-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.ServerURL"><!--   --></a>		<h4>ServerURL (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ServerURL method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get ServerURL<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.ServerURL.comments"><!--   --></a>Base URL for Domino REST API calls, protocol + server + &quot;api/v1&quot;, e.g. &quot;http://localhost:8880/api/v1&quot; to connect to a locally running Domino server.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.SSLHostValidation-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.SSLHostValidation"><!--   --></a>		<h4>SSLHostValidation (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="SSLHostValidation method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get SSLHostValidation<em></em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.SSLHostValidation.comments"><!--   --></a>Turn on or off SSL host validation. Without a valid certificate or unless SSLHostValidation is set to False, the request will return a status 0, if the server requires SSL verification. Settng SSLHostValidation to false can be used for internal HTTPS URLs on servers with self-signed certs.<br />Default value is True.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.VerboseLogging-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.VerboseLogging"><!--   --></a>		<h4>VerboseLogging (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="VerboseLogging method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get VerboseLogging<em></em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.VerboseLogging.comments"><!--   --></a>Whether this Server should create a .log file with verbose logging output from libcurl when a request to the DRAPI server is made. This is helpful when debugging networking issues related to VPN&apos;s, proxies, self-signed SSL certificates, etc.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Get.VSEVersion-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Get.VSEVersion"><!--   --></a>		<h4>VSEVersion (Get)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="VSEVersion method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Get VSEVersion<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Get.VSEVersion.comments"><!--   --></a>Release version of this VSE.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Set.JWTToken-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Set.JWTToken"><!--   --></a>		<h4>JWTToken (Set)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="JWTToken method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Set JWTToken<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Set.JWTToken.comments"><!--   --></a>The JWT token string (encrypted and Base-64 encoded) used to log in to the DRAPI server. The property will be set automatically if a token is provided in the script invocation, or when the script sucessfully executes a Login call. This propery will need to be set for most methods of DrapiRequest associated with this server object.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Set.ServerURL-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Set.ServerURL"><!--   --></a>		<h4>ServerURL (Set)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="ServerURL method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Set ServerURL<em></em> As String</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Set.ServerURL.comments"><!--   --></a>Base URL for Domino REST API calls, protocol + server + &quot;api/v1&quot;, e.g. &quot;http://localhost:8880/api/v1&quot; to connect to a locally running Domino server.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Set.SSLHostValidation-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Set.SSLHostValidation"><!--   --></a>		<h4>SSLHostValidation (Set)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="SSLHostValidation method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Set SSLHostValidation<em></em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Set.SSLHostValidation.comments"><!--   --></a>Turn on or off SSL host validation. Without a valid certificate or unless SSLHostValidation is set to False, the request will return a status 0, if the server requires SSL verification. Settng SSLHostValidation to false can be used for internal HTTPS URLs on servers with self-signed certs.<br />Default value is True.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Set.VerboseLogging-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Set.VerboseLogging"><!--   --></a>		<h4>VerboseLogging (Set)</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="VerboseLogging method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Property Set VerboseLogging<em></em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Set.VerboseLogging.comments"><!--   --></a>Whether this Server should create a .log file with verbose logging output from libcurl when a request to the DRAPI server is made. This is helpful when debugging networking issues related to VPN&apos;s, proxies, self-signed SSL certificates, etc.</td></tr>				</tbody>		</table>			</li></ul>	</li></ul>
+				<!-- ============ METHOD DETAIL ========== --><ul class="blockList">	<li class="blockList">		<a name="method.detail"><!--   --></a>		<h3>Methods Detail</h3>		<!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.CreateRequest-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.CreateRequest"><!--   --></a>		<h4>CreateRequest</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="CreateRequest method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function CreateRequest<em>(ScopeName As String)</em> As DrapiRequest</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.CreateRequest.comments"><!--   --></a>Creates a DrapiRequest object to make requests to the configured server.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="DrapiVSE.DrapiServer.CreateRequest.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>ScopeName</strong></td><td class="colOne">String</td><td class="colOne attributes">CONST,<br />OPTIONAL,<br />OptionalValue: LIT_STR("")</td><td class="colLast comment"><em>Scope to use for the request. Domino databases are made known through a scope that defines access to forms, fields, views, and agents.&nbsp;</em></td></tr>			</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Login-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Login"><!--   --></a>		<h4>Login</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="Login method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function Login<em>(User As String, Password As String)</em> As DrapiResponse</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Login.comments"><!--   --></a>Logs into a Domino REST API server and sets this DrapiServer&apos;s JWT token to the one provided by the server.</td></tr>	<tr>	<th class="colFirst min" scope="col">idx</th>	<th class="colOne" scope="col"><a name="DrapiVSE.DrapiServer.Login.arguments"><!--   --></a>Argument</th>	<th class="colOne" scope="col">Data Type</th>	<th class="colOne attributes" scope="col">Attributes</th>	<th class="colLast comment" scope="col">Comments</th></tr><tr class="altColor"><td class="colFirst min">1</strong></td><td class="colOne"><strong>User</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>User name of the account to log into.&nbsp;</em></td></tr><tr class="altColor"><td class="colFirst min">2</strong></td><td class="colOne"><strong>Password</strong></td><td class="colOne">String</td><td class="colOne attributes"></td><td class="colLast comment"><em>Password of the account.&nbsp;</em></td></tr>			</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.Logout-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.Logout"><!--   --></a>		<h4>Logout</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="Logout method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function Logout<em>()</em> As DrapiResponse</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.Logout.comments"><!--   --></a>Logs out the current user from the Domino REST API server, invalidating the JWT token.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.New-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.New"><!--   --></a>		<h4>New</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="New method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function New<em>()</em> As DrapiServer</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.New.comments"><!--   --></a>Constructor.</td></tr>				</tbody>		</table>			</li></ul><!-- Method Detail Element --><a name="DrapiVSE.DrapiServer.RegisterVSEPath-"><!--  --></a><ul class="blockList">	<li class="blockList">		<a name="DrapiVSE.DrapiServer.RegisterVSEPath"><!--   --></a>		<h4>RegisterVSEPath</h4>		<table class="methoddetail" border="0" cellpadding="3" cellspacing="0" summary="RegisterVSEPath method detail table">			<thead>				<tr><th class="colFirst" scope="col" colspan="5"><pre>Function RegisterVSEPath<em>()</em> As Boolean</pre></th></tr>			</thead>			<tbody>	<tr class="altColor"><td class="colFirst" colspan="5"><a name="DrapiVSE.DrapiServer.RegisterVSEPath.comments"><!--   --></a>Internal method used by the runtime.</td></tr>				</tbody>		</table>			</li></ul>	</li></ul>
+			</li>
+		</ul>
+	</div> 
+
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav">
+	<a name="navbar.bottom"><!--   --></a>
+	<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+	
+	<a name="navbar.bottom.firstrow"><!--   --></a>
+	<ul class="navList" title="Navigation">
+		<!--  -->
+	</ul>
+</div>
+
+<div class="subNav">
+	<ul class="navList">
+		<!-- 
+		<li><a href="prevelement (class or package)url.html" title="previous element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Previous element (class or package) Name</span></a></li>
+		{{link_prevelement}}
+		-->
+
+		<!-- 
+		<li><a href="nextelement (class or package)url.html" title="next element (class or package) fqn in parent/package"><span element (class or package)="typeNameLink">Next element (class or package) Name</span></a></li>
+		{{link_nextelement}}
+		-->
+	</ul>
+	<ul class="navList">
+	<!-- 
+		<li><a href="../../../../index.html?url for frames" target="_top">Frames</a></li>
+		<li><a href="{{elementurl}}" target="_top">No&nbsp;Frames</a></li>
+	-->
+	</ul>
+	<ul class="navList" id="navcontent_navbar_bottom">
+	<!-- 
+		<li><a href="../../../nav-content-noframe.html">All&nbsp;Classes</a></li>
+	 -->
+	</ul>
+	
+	<div>
+		<script type="text/javascript"><!--
+		  navcontentLink = document.getElementById("navcontent_navbar_bottom");
+		  if(window==top) {
+			navcontentLink.style.display = "block";
+		  }
+		  else {
+			navcontentLink.style.display = "none";
+		  }
+		  //-->
+		</script>
+	</div>
+	
+	<div>
+		<ul class="subNavList">
+		<!-- 
+			<li>Summary:&nbsp;</li>
+			<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.summary">Method</a></li>
+		 -->
+		</ul>
+		<ul class="subNavList">
+		<!-- 
+			<li>Detail:&nbsp;</li>
+			<li>Field&nbsp;|&nbsp;</li>
+			<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+			<li><a href="#method.detail">Method</a></li>
+		 -->
+		</ul>
+	</div>
+	
+	<a name="skip.navbar.bottom"><!--   --></a>
+</div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; <a href="https://www.hcltechsw.com/">HCL America, Inc.</a> 1999, 2023. All Rights Reserved.</small></p>
+</body>
+</html>
