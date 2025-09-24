@@ -15,7 +15,7 @@ Incorporating ZuluVSE is straightforward. You just need to add the following JSO
 ```json
     "ZuluVSE": {
         "library": "ZuluVSE VoltScript Extension",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "module": "zuluvse",
     }
 ```

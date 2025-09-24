@@ -13,7 +13,7 @@ Incorporating OSUtilsVSE is straightforward. You just need to add the following 
 ```json
         "OSUtilsVSE": {
             "library": "OSUtilsVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "osutilsvse",
             "repository":"volt-mx-marketplace"
         }

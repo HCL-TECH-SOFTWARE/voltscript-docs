@@ -55,7 +55,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "ContextVSE": {
             "library": "ContextVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "contextvse",
             "repository": "volt-mx-marketplace"
         }
@@ -82,7 +82,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "HashVSE": {
             "library": "HashVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "hashvse",
             "repository": "volt-mx-marketplace"
         }
@@ -91,7 +91,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "JsonVSE": {
             "library": "JsonVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "jsonvse",
             "repository": "volt-mx-marketplace"
         }
@@ -100,7 +100,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "OSUtilsVSE": {
             "library": "OSUtilsVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "osutilsvse",
             "repository": "volt-mx-marketplace"
         }
@@ -109,7 +109,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "StreamVSE": {
             "library": "StreamVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "streamvse",
             "repository": "volt-mx-marketplace"
         }
@@ -118,7 +118,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "WebVSE": {
             "library": "WebVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "webvse",
             "repository": "volt-mx-marketplace"
         }
@@ -127,7 +127,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "XmlVSE": {
             "library": "XMLVSE VoltScript Extension",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "module": "xmlvse",
             "repository": "volt-mx-marketplace"
         }
@@ -136,7 +136,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "ZipVSE": {
             "library": "ZipVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "zipvse",
             "repository": "volt-mx-marketplace"
         }
@@ -145,7 +145,7 @@ You'll need the relevant dependency to add to your **vseDependencies** object in
 ```json
         "ZuluVSE": {
             "library": "ZuluVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "zuluvse",
             "repository": "volt-mx-marketplace"
         }

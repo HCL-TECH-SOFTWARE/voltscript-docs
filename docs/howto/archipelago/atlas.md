@@ -30,18 +30,7 @@ The `atlas.json` file is used to define a project's metadata as well as dependen
 
 ## VSE Extensions
 
-In EA1 and EA2, it was only possible to download VSEs by using the numeric portions of the file download URL, e.g. **library** as "25265" and **module** as "25877/20841". The module changed for each version, because it corresponded to a specific file download. This required the Volt MX Marketplace repository URL to be **"https://community.demo-hclvoltmx.com/marketplace/asset"**.
-
-From EA3, a different download URL from Volt MX Marketplace is supported. For this, the **library** is the asset title, e.g. "JsonVSE VoltScript Extension". The **module** is the asset filename when downloaded, minus the file suffix, e.g. "jsonvse". This requires the Volt MX Marketplace repository URL to be **"https://community.demo-hclvoltmx.com/marketplace"**. Note that unlike EA1 and EA2, this does not have "/asset" on the end.
-
-If the VSE library and extension are numeric, you **must** have the repository URL as "https://community.demo-hclvoltmx.com/marketplace/asset". If it is the more human-readable format mapping to the VSE name, you **must** have the repository URL as "https://community.demo-hclvoltmx.com/marketplace". This format is the preferable option and there has been limited usage of EA1 and EA2, so the repository ID has not been changed. Documentation and the latest versions of all VoltScript Library Modules have been updated to use it.
-
-!!! warning
-    All affected VoltScript Library Modules have had new releases. These are:<br/>
-        - VoltScript JSON Converter, version 1.0.4.<br/>
-        - VoltScript Collections, version 1.0.4.<br/>
-        - VoltScript VoltMX Middleware, version 1.0.4.<br/>
-    Ensure you are using at least these versions, or there may be errors downloading downstream dependencies from "https://community.demo-hclvoltmx.com/marketplace".
+The **library** is the asset title, e.g. "JsonVSE VoltScript Extension". The **module** is the asset filename when downloaded, minus the file suffix, e.g. "jsonvse". The Volt MX Marketplace repository URL is **"https://community.demo-hclvoltmx.com/marketplace"**.
 
 !!! info
     By default, VSE files for all platforms (Windows, Linux, MacOS) will be copied into the project. You can use `runtimePlatforms` property to restrict which platforms' VSEs are copied in. For more details, see [How to Structure an atlas.json](../../references/atlas.md).

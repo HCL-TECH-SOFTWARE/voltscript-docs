@@ -53,7 +53,7 @@ You'll learn how to use dependency management, how it creates a `seti.ini`, and 
 1. Add vseDependencies object. This is an object, because each element needs a label that will be used in the `UseVSE` statement.
 1. Add a label "StreamVSE". For the value, then add an empty JSON object.
     1. Set library to "StreamVSE VoltScript Extension".
-    1. Set version to "1.0.3".
+    1. Set version to "1.0.4".
     1. Set module to "streamvse".
     1. Set repository to "volt-mx-marketplace".
 1. **Save** the atlas.json. The final atlas.json should look like this:
@@ -100,7 +100,7 @@ You'll learn how to use dependency management, how it creates a `seti.ini`, and 
     "vseDependencies": {
         "StreamVSE": {
             "library": "StreamVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "streamvse",
             "repository": "volt-mx-marketplace"
         }

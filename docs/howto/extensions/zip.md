@@ -16,7 +16,7 @@ Incorporating ZipVSE is straightforward. You just need to add the following JSON
 ```json
         "ZipVSE": {
             "library": "ZipVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "zipvse",
             "repository":"volt-mx-marketplace"
         }

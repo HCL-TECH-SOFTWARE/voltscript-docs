@@ -13,7 +13,7 @@ Incorporating JsonVSE is straightforward. You just need to add the following JSO
 ```json
         "JsonVSE": {
             "library": "JsonVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "jsonvse",
             "repository":"volt-mx-marketplace"
         }

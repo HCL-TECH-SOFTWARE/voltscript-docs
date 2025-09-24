@@ -13,7 +13,7 @@ Incorporating XMLVSE is straightforward. You just need to add the following JSON
 ```json
         "XmlVSE": {
             "library": "XMLVSE VoltScript Extension",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "module": "xmlvse",
             "repository": "volt-mx-marketplace"
         }

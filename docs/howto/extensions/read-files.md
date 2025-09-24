@@ -13,7 +13,7 @@ Incorporating OSUtilsVSE is straightforward. You just need to add the following 
 ```json
         "StreamVSE": {
             "library": "StreamVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "streamvse",
             "repository": "volt-mx-marketplace"
         }

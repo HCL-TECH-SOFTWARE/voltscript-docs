@@ -13,7 +13,7 @@ Incorporating HashVSE is straightforward. You just need to add the following JSO
 ```json
         "HashVSE": {
             "library": "hashVSE Voltscript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "hashvse",
             "repository":"volt-mx-marketplace"
         }

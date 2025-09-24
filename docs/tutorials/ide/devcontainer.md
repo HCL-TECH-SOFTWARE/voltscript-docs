@@ -43,14 +43,14 @@ You will need to load the docker image for VoltScript downloaded from [Harbor](h
 1. Type `docker login https://hclcr.io` and press enter.
 1. Enter the email address from your user profile as the username.
 1. Paste the CLI secret as the password.
-1. Once login is successful, enter the command `docker pull hclcr.io/voltmxgo-ea/voltscript-devcontainer:1.0.3` and press enter.
+1. Once login is successful, enter the command `docker pull hclcr.io/voltmxgo/voltscript-devcontainer:10.0.0_GA` and press enter.
 
     !!! warning
         Do not click the copy icon in the "Pull Command" column on the **voltscript-devcontainer** project page. This uses the SHA hash instead, so the Docker image will come down untagged.
 
         ![Copy](../../assets/images/harbor_devcontainer.png)
 
-1. The image should now be available. You can confirm by issuing the command `docker images`, where you should find an image named "hclcr.io/voltmxgo-ea/voltscript-devcontainer" with a tag 1.0.3.
+1. The image should now be available. You can confirm by issuing the command `docker images`, where you should find an image named "hclcr.io/voltmxgo/voltscript-devcontainer" with a tag 10.0.0_GA.
 
 ## Creating the Dev Container
 
@@ -66,7 +66,7 @@ At the minimum, the JSON file must have the following content:
 
 ```json
 {
-    "image": "hclcr.io/voltmxgo-ea/voltscript-devcontainer:1.0.3",
+    "image": "hclcr.io/voltmxgo/voltscript-devcontainer:10.0.0_GA",
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.

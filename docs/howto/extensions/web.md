@@ -16,13 +16,13 @@ Incorporating WebVSE and JsonVSE is straightforward. You just need to add the fo
 ```json
         "WebVSE": {
             "library": "WebVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "webvse",
             "repository":"volt-mx-marketplace"
         },
         "JsonVSE": {
             "library": "JsonVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "jsonvse",
             "repository":"volt-mx-marketplace"
         }

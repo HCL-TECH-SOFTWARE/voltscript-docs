@@ -13,13 +13,13 @@ Incorporating StreamVSE and ContextVSE is straightforward. You just need to add 
 ```json
         "StreamVSE": {
             "library": "StreamVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "streamvse",
             "repository": "volt-mx-marketplace"
         },
         "ContextVSE": {
             "library": "ContextVSE VoltScript Extension",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "module": "contextvse",
             "repository":"volt-mx-marketplace"
         }

@@ -1,6 +1,27 @@
 # In-memory streaming
 
+--8<-- "setup.md"
+
+## Introduction
+
 Reading and writing to files is useful. But in-memory processing is typically quicker because it removes the disk I/O interaction. In-memory streams are designed as a more performant approach than string concatenation.
+
+## VoltScript dependencies
+
+Incorporating StreamVSE and ContextVSE is straightforward. You just need to add the following JSON object to the `vsesDependencies` element in your `atlas.json`.
+
+```json
+        "StreamVSE": {
+            "library": "StreamVSE VoltScript Extension",
+            "version": "1.0.4",
+            "module": "streamvse",
+            "repository": "volt-mx-marketplace"
+        }
+```
+
+--8<-- "vse-repository.md"
+
+## Processing streams in memory
 
 To create an in-memory stream, open the stream with either "MEMORY" or "BUFFER" as the character set.
 
